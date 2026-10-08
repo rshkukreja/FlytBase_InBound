@@ -1,0 +1,19 @@
+{
+  "schema": "CaseStudyExplanation",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: explain, in plain sales language for a BDR/AE, why the top-ranked content is the strongest proof for\nthis lead, how to use it, and where it does NOT match the lead (be candid). Base it on the scores, the\nreferral link and the page excerpts provided.",
+  "user": "Lead: Head of Operations, Northern Operations Division at [mock company_legal_name]; [mock use_case]; [mock site_locations], [mock site_locations]; referred by [mock referral_entities], [mock referral_entities].\nRanking:\n#1 score=7.9 components={'rubric': 0.0, 'referral': 0.0, 'region': 0.0, 'industry': 0.286, 'section': 1.0} section=case-studies url=https://flytbase.com/case-studies/mining-site-inspection referrals=[] rubric=None\n#2 score=5.4 components={'rubric': 0.0, 'referral': 0.0, 'region': 0.0, 'industry': 0.143, 'section': 0.8} section=blog url=https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine referrals=[] rubric=None\n\nTop page excerpt:\nPage https://flytbase.com/case-studies/mining-site-inspection\nPartners\nMock page text about mining operations, autonomous drone docks and inspection in Chile.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nMock Partner One Chile Gold System Integrator",
+  "response": {
+    "why_strongest": "[mock why_strongest]",
+    "how_to_use_in_sales": "[mock how_to_use_in_sales]",
+    "gaps_vs_lead": "[mock gaps_vs_lead]"
+  },
+  "valid": true
+}

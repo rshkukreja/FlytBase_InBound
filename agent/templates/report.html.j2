@@ -1,0 +1,246 @@
+{% macro srclink(sid) -%}
+{%- set s = src.get(sid) -%}
+{%- if s -%}<a class="sid" href="{{ s.url if not s.url.startswith('inbound') else '#input' }}" target="_blank" title="{{ s.title }}">{{ sid }}</a>{%- else -%}<span class="sid">{{ sid }}</span>{%- endif -%}
+{%- endmacro %}
+{% macro fref(fid) -%}
+{%- set f = finding.get(fid) -%}<a class="fid" href="#{{ fid }}" title="{{ f.claim if f else '' }}">{{ fid }}</a>
+{%- endmacro %}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbound Brief · {{ profile.company_short_name }}</title>
+<style>
+:root{--bg:#f7f7f4;--card:#fff;--ink:#1b1d21;--muted:#5d636e;--line:#e3e3dd;--accent:#0f5ec9;--ok:#1d7a46;--warn:#a35b00;--bad:#b3261e;--chip:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1a1d21;--ink:#e8e9eb;--muted:#9aa1ab;--line:#2c3036;--accent:#6aa7ff;--ok:#57c48a;--warn:#e5a54b;--bad:#ff7d73;--chip:#22272e}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:28px 16px 80px}
+h1{font-size:28px;margin:0 0 4px;letter-spacing:-.01em}h2{font-size:21px;margin:0 0 12px}h3{font-size:16px;margin:18px 0 8px}
+.sub{color:var(--muted)}a{color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:18px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.chip{background:var(--chip);border-radius:999px;padding:3px 11px;font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.kpi{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.kpi b{display:block;font-size:22px}.kpi span{color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;vertical-align:top;padding:8px 8px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:600;font-size:12.5px;text-transform:uppercase;letter-spacing:.03em}
+.tbl{overflow-x:auto}
+.st{font-weight:600;font-size:12.5px;border-radius:6px;padding:2px 7px;white-space:nowrap}.confirmed,.met,.ok{color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent)}.partial{color:var(--warn);background:color-mix(in srgb,var(--warn) 12%,transparent)}.unknown,.not_met,.bad{color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,transparent)}
+q,.quote{color:var(--muted);font-style:italic}.quote{border-left:3px solid var(--line);padding-left:10px;margin:6px 0}
+.sid,.fid{font:600 12px ui-monospace,Menlo,monospace;background:var(--chip);border-radius:5px;padding:1px 5px;text-decoration:none}
+.email{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0}.email pre{white-space:pre-wrap;font:14.5px/1.55 inherit;font-family:inherit;margin:10px 0 0}
+.meta{color:var(--muted);font-size:13px}.flag{color:var(--warn)}
+details summary{cursor:pointer;color:var(--accent)}
+ol.trace li,ul.tight li{margin:3px 0}
+.lede{font-size:16px}
+@media print{.card{break-inside:avoid}}
+</style>
+</head>
+<body><main>
+<p class="sub">{{ vendor }} inbound agent · live run output · {{ meta.run_id }}</p>
+<h1>{{ email.sender_name }} · {{ profile.company_legal_name }}</h1>
+<p class="sub">{{ email.title }} — “{{ email.subject }}”</p>
+<div class="chips">
+  <span class="chip">Run date {{ meta.run_date }}</span><span class="chip">{{ meta.llm }}</span>
+  <span class="chip">search: {{ meta.search }}</span><span class="chip">{{ meta.seconds }}s end-to-end</span>
+  <span class="chip">{{ meta.counters.llm_calls }} LLM calls</span><span class="chip">{{ meta.counters.searches }} searches</span>
+  <span class="chip">{{ r.sources|length }} sources</span>
+  <span class="chip">{{ r.findings|length }} verified findings · {{ r.rejected|length }} rejected</span>
+  {% if meta.mock %}<span class="chip st bad">MOCK RUN — placeholder output</span>{% endif %}
+</div>
+
+<section class="card">
+  <h2>At a glance</h2>
+  <div class="kpis">
+    <div class="kpi"><b>{{ q.priority }}</b><span>Priority</span></div>
+    <div class="kpi"><b>{{ q.fit_score }}/100</b><span>ICP fit</span></div>
+    <div class="kpi"><b>{{ q.meddpicc_points }}/{{ q.meddpicc_max }}</b><span>MEDDPICC completeness ({{ q.meddpicc_pct }}%)</span></div>
+    <div class="kpi"><b>{{ gtm.motion }}</b><span>Go-to-market motion</span></div>
+  </div>
+  <h3>Next step</h3>
+  <p class="lede"><b>{{ h.draft.next_step.action }}</b> — {{ h.draft.next_step.owner }}, {{ h.draft.next_step.timing }}.</p>
+  {% if cs.primary %}<p>Lead with: <a href="{{ cs.primary.url }}" target="_blank">{{ cs.primary.title or cs.primary.url }}</a></p>{% endif %}
+</section>
+
+<section class="card">
+  <h2>Pipeline trace</h2>
+  <div class="tbl"><table>
+    <tr><th>Stage</th><th>Seconds</th><th>LLM calls</th><th>Searches</th><th>Fetches</th><th>Status</th></tr>
+    {% for s in meta.stages %}<tr><td>{{ s.title }}</td><td>{{ s.seconds }}</td><td>{{ s.llm_calls }}</td><td>{{ s.searches }}</td><td>{{ s.fetches }}</td><td>{{ s.status }}</td></tr>{% endfor %}
+  </table></div>
+  <p class="meta">Stage 3 runs after Stages 4 and 5 because the emails use their outputs. Every LLM prompt and response is in <code>llm_calls/</code>; every stage output is in <code>stages/</code>.</p>
+</section>
+
+<section class="card" id="input">
+  <h2>Input</h2>
+  <pre class="quote" style="white-space:pre-wrap;font-style:normal">{{ email.raw }}</pre>
+</section>
+
+<!-- ================= STAGE 1 ================= -->
+<section class="card">
+  <h2>Stage 1 · Qualification — {{ q.framework }}</h2>
+  <p><b>Why {{ q.framework }}:</b> {{ q.framework_rationale }}</p>
+  <h3>Priority: {{ q.priority }}</h3>
+  <p class="sub">{{ q.priority_meaning }}</p>
+  <ul class="tight">{% for x in q.priority_reasoning %}<li>{{ x }}</li>{% endfor %}</ul>
+  <h3>MEDDPICC</h3>
+  <div class="tbl"><table>
+    <tr><th>Element</th><th>Status</th><th>Known (from email)</th><th>Missing</th><th>Discovery questions</th></tr>
+    {% for el in q.elements %}<tr>
+      <td><b>{{ el.element }}</b></td><td><span class="st {{ el.status }}">{{ el.status }}</span></td>
+      <td>{{ el.what_we_know or '—' }}{% if el.evidence_quote %}<div class="quote">“{{ el.evidence_quote }}”</div>{% endif %}</td>
+      <td>{{ el.what_is_missing }}</td>
+      <td><ul class="tight">{% for dq in el.discovery_questions %}<li>{{ dq }}</li>{% endfor %}</ul></td></tr>{% endfor %}
+  </table></div>
+  <h3>ICP fit — {{ q.fit_score }}/100</h3>
+  <div class="tbl"><table>
+    <tr><th>Criterion</th><th>Weight</th><th>Assessment</th><th>Points</th><th>Evidence</th></tr>
+    {% for l in q.fit %}<tr><td>{{ l.label }}</td><td>{{ l.weight }}</td><td><span class="st {{ l.assessment }}">{{ l.assessment }}</span></td><td>{{ '%g'|format(l.points) }}</td>
+      <td>{% if l.evidence_quote %}<span class="quote">“{{ l.evidence_quote }}”</span>{% if not l.quote_verified %} <span class="flag">(not verified)</span>{% endif %}<br>{% endif %}<span class="meta">{{ l.note }}</span></td></tr>{% endfor %}
+  </table></div>
+  {% if q.ambiguities %}<h3>Ambiguities to resolve</h3><ul class="tight">{% for x in q.ambiguities %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+  {% if q.risks %}<h3>Risks</h3><ul class="tight">{% for x in q.risks %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+  {% if q.verification_flags %}<h3>Grounding checks</h3><ul class="tight flag">{% for x in q.verification_flags %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+</section>
+
+<!-- ================= STAGE 2 ================= -->
+<section class="card">
+  <h2>Stage 2 · Account research — {{ profile.company_legal_name }}</h2>
+  <p class="meta">Company identification:
+    {% if r.company_identifiers.cik %}SEC EDGAR CIK {{ r.company_identifiers.cik }} ({{ r.company_identifiers.label }}) via {{ r.company_identifiers.method }}{% else %}not found in SEC EDGAR{% endif %}
+    {% if r.company_identifiers.annual_report %} · annual report: <a href="{{ r.company_identifiers.annual_report.url }}" target="_blank">{{ r.company_identifiers.annual_report.form }} filed {{ r.company_identifiers.annual_report.date }}</a>{% endif %}
+  </p>
+  <p class="meta">Every finding below carries a source id and a verbatim quote that the program located in the fetched source text. {{ r.rejected|length }} claims failed that check and were removed (see appendix).</p>
+  {% for d, label in dims.items() %}{% if d != 'contact' %}
+  <h3>{{ label }} <span class="meta">({{ findings_by_dim[d]|length }})</span></h3>
+  {% if findings_by_dim[d] %}<div class="tbl"><table>
+    <tr><th style="width:52px">Id</th><th>Finding</th><th>Why it matters</th></tr>
+    {% for f in findings_by_dim[d] %}<tr id="{{ f.id }}"><td><span class="fid">{{ f.id }}</span></td>
+      <td>{{ f.claim }} {% if f.date_or_period %}<span class="meta">({{ f.date_or_period }})</span>{% endif %} {{ srclink(f.source_id) }}
+        <div class="quote">“{{ f.evidence_quote }}”</div></td><td>{{ f.so_what }}</td></tr>{% endfor %}
+  </table></div>{% else %}<p class="flag">No verified findings for this dimension.</p>{% endif %}
+  {% endif %}{% endfor %}
+  <h3>Sender verification</h3>
+  <p><span class="st {{ 'ok' if r.contact.publicly_verified else 'partial' }}">{{ 'publicly verified' if r.contact.publicly_verified else 'not publicly verified' }}</span> {{ r.contact.summary }}</p>
+  {% for f in findings_by_dim['contact'] %}<p id="{{ f.id }}"><span class="fid">{{ f.id }}</span> {{ f.claim }} {{ srclink(f.source_id) }}</p>{% endfor %}
+  <h3>Positioning recommendation</h3>
+  <p class="lede">{{ r.positioning.thesis }}</p>
+  <div class="tbl"><table><tr><th>Value hook</th><th>Evidence</th><th>How to say it</th></tr>
+    {% for vh in r.positioning.value_hooks %}<tr><td>{{ vh.hook }}</td><td>{% for i in vh.finding_ids %}{{ fref(i) }} {% endfor %}</td><td>{{ vh.how_to_say_it }}</td></tr>{% endfor %}
+  </table></div>
+  <h3>Stakeholders</h3>
+  <ul class="tight">{% for st in r.positioning.likely_stakeholders %}<li><b>{{ st.name_or_role }}</b> — {{ st.why_involved }} <span class="st {{ 'ok' if st.basis=='verified' else 'partial' }}">{{ st.basis }}</span> {% for i in st.finding_ids %}{{ fref(i) }} {% endfor %}</li>{% endfor %}</ul>
+  {% if r.positioning.risks_and_objections %}<h3>Risks & objections</h3><ul class="tight">{% for x in r.positioning.risks_and_objections %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+  {% if r.positioning.avoid %}<h3>Avoid</h3><ul class="tight">{% for x in r.positioning.avoid %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+  {% if r.gaps %}<h3>Research gaps</h3><ul class="tight flag">{% for x in r.gaps %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+</section>
+
+<!-- ================= STAGE 3 ================= -->
+<section class="card">
+  <h2>Stage 3 · Adaptive response sequence</h2>
+  <p><b>Strategy:</b> {{ seq.draft.strategy }}</p>
+  <p><b>Tone:</b> {{ seq.draft.tone_notes }}</p>
+  {% for em in seq.draft.emails %}
+  <div class="email">
+    <div class="meta"><b>Email {{ em.step }}</b> · {{ em.send_timing }} · trigger: {{ em.trigger }}</div>
+    <div class="meta">Goal: {{ em.goal }} · targets: {{ em.unknowns_targeted|join(', ') }} · research: {% for i in em.finding_ids %}{{ fref(i) }} {% endfor %}</div>
+    <h3 style="margin-top:10px">{{ em.subject }}</h3>
+    <pre>{{ em.body }}</pre>
+    {% if em.materials %}<p class="meta">Materials: {% for m in em.materials %}<a href="{{ m }}" target="_blank">{{ m }}</a> {% endfor %}</p>{% endif %}
+    <p class="meta"><b>Why this step:</b> {{ em.why_this_step }}</p>
+  </div>
+  {% endfor %}
+  <h3>Reply branches</h3>
+  <div class="tbl"><table><tr><th>If he replies…</th><th>Next move</th></tr>
+    {% for b in seq.draft.reply_branches %}<tr><td>{{ b.if_reply }}</td><td>{{ b.next_move }}</td></tr>{% endfor %}</table></div>
+  <h3>Discovery coverage</h3>
+  <div class="tbl"><table><tr><th>Open MEDDPICC element</th><th>Targeted in email(s)</th></tr>
+    {% for el, steps in seq.coverage.items() %}<tr><td>{{ el }}</td><td>{% if steps %}{{ steps|join(', ') }}{% else %}<span class="st bad">not covered</span>{% endif %}</td></tr>{% endfor %}</table></div>
+  <p class="meta">Checker revisions: {{ seq.revisions }}. {% if seq.issues %}<span class="flag">Open issues: {{ seq.issues|join('; ') }}</span>{% else %}All checks passed.{% endif %}</p>
+</section>
+
+<!-- ================= STAGE 4 ================= -->
+<section class="card">
+  <h2>Stage 4 · Case study & material matching</h2>
+  <p class="meta">Discovery: {{ cs.discovery_stats.sitemap_urls }} sitemap URLs → {{ cs.discovery_stats.default_language_urls }} default-language pages → {{ cs.discovery_stats.pool }} in pool ({{ cs.discovery_stats.site_search_hits }} via site search) → {{ cs.discovery_stats.fetched }} fetched → {{ cs.discovery_stats.rubric_scored }} rubric-scored.</p>
+  <p>Referral entities parsed from the email: <b>{{ cs.referral_entities|join(', ') or 'none' }}</b>.
+    {% if cs.referral_linked_urls %}Vendor pages mentioning them: {% for u in cs.referral_linked_urls %}<a href="{{ u }}" target="_blank">{{ u.split('/')[-1] }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.{% else %}<span class="flag">No vendor page mentions them.</span>{% endif %}</p>
+  {% if cs.primary %}
+  <h3>Recommended: <a href="{{ cs.primary.url }}" target="_blank">{{ cs.primary.title or cs.primary.url }}</a> <span class="meta">({{ cs.primary.section }}, score {{ cs.primary.final_score }})</span></h3>
+  {% if cs.explanation %}
+  <p><b>Why it is the strongest fit:</b> {{ cs.explanation.why_strongest }}</p>
+  <p><b>How to use it:</b> {{ cs.explanation.how_to_use_in_sales }}</p>
+  <p><b>Where it does not match:</b> {{ cs.explanation.gaps_vs_lead }}</p>{% endif %}
+  {% if cs.primary.rubric %}<div class="quote">“{{ cs.primary.rubric.evidence_quote }}”</div>{% endif %}
+  {% endif %}
+  <h3>Ranking</h3>
+  <div class="tbl"><table>
+    <tr><th>#</th><th>Content</th><th>Score</th><th>Rubric (ind/use/env/proof)</th><th>Referral</th><th>Region</th><th>Keywords</th><th>Section</th></tr>
+    {% for c in cs.ranked %}<tr><td>{{ loop.index }}</td><td><a href="{{ c.url }}" target="_blank">{{ c.title or c.url }}</a><div class="meta">{{ c.rubric.summary if c.rubric else '' }}</div></td>
+      <td><b>{{ c.final_score }}</b></td>
+      <td>{% if c.rubric %}{{ c.rubric.industry_fit }}/{{ c.rubric.use_case_fit }}/{{ c.rubric.environment_fit }}/{{ c.rubric.proof_strength }}{% if not c.rubric_quote_verified %} <span class="flag">(quote unverified, ×0.5)</span>{% endif %}{% else %}—{% endif %}</td>
+      <td>{{ c.referral_mentions }}</td><td>{{ c.region_hit }}</td><td>{{ c.industry_share }}</td><td>{{ c.section }}</td></tr>{% endfor %}
+  </table></div>
+  <p class="meta">Score = 100 × (0.45 rubric + 0.25 referral + 0.15 region + 0.10 keywords + 0.05 section weight). Weights in <code>agent/config.py</code>.</p>
+</section>
+
+<!-- ================= STAGE 5 ================= -->
+<section class="card">
+  <h2>Stage 5 · Go-to-market motion</h2>
+  <p class="lede"><b>{{ gtm.motion }}</b> · partner type: {{ gtm.recommended_partner_type }}</p>
+  <h3>Deal complexity: {{ gtm.complexity_level }}</h3>
+  <ul class="tight">{% for k, v in gtm.complexity_factors.items() %}<li><span class="st {{ 'ok' if v else 'unknown' }}">{{ 'yes' if v else 'no' }}</span> {{ k }}</li>{% endfor %}</ul>
+  <h3>Decision trace</h3>
+  <ol class="trace">{% for t in gtm.decision_trace %}<li>{{ t }}</li>{% endfor %}</ol>
+  <p class="meta">Partner pages read: {% for u in gtm.partner_pages %}<a href="{{ u }}" target="_blank">{{ u }}</a> {% endfor %}· partners extracted: {{ gtm.partners_found }} ({{ gtm.partners_rejected }} rejected) · in country: {{ gtm.in_country }} · elsewhere in region: {{ gtm.in_region }}</p>
+  {% if gtm.shortlist %}<h3>Partner shortlist</h3>
+  <div class="tbl"><table><tr><th>Partner</th><th>Country</th><th>Tier</th><th>Type</th><th>Points</th><th>Why</th></tr>
+    {% for p in gtm.shortlist %}<tr><td><b>{{ p.name }}</b></td><td>{{ p.country }}</td><td>{{ p.tier }}</td><td>{{ p.types|join(', ') }}</td><td>{{ '%g'|format(p.points) }}</td><td>{{ p.reasons|join('; ') }}</td></tr>{% endfor %}
+  </table></div>{% endif %}
+  {% if gtm.rationale %}
+  <h3>Rationale</h3><p>{{ gtm.rationale.rationale }}</p>
+  <p><b>AE owns:</b> {{ gtm.rationale.ae_role }}</p><p><b>Partner owns:</b> {{ gtm.rationale.partner_role }}</p>
+  {% if gtm.rationale.risks %}<ul class="tight">{% for x in gtm.rationale.risks %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+  {% endif %}
+</section>
+
+<!-- ================= STAGE 6 ================= -->
+<section class="card">
+  <h2>Stage 6 · AE handoff</h2>
+  <h3>Buyer context</h3>
+  <p>{{ h.draft.who_he_is }}</p>
+  <p><b>What he cares about</b></p><ul class="tight">{% for x in h.draft.what_he_cares_about %}<li>{{ x }}</li>{% endfor %}</ul>
+  <p><b>Who else is involved</b></p><ul class="tight">{% for st in h.draft.others_involved %}<li><b>{{ st.name_or_role }}</b> — {{ st.why_involved }} <span class="st {{ 'ok' if st.basis=='verified' else 'partial' }}">{{ st.basis }}</span> {% for i in st.finding_ids %}{{ fref(i) }} {% endfor %}</li>{% endfor %}</ul>
+  <h3>Qualification status</h3>
+  <p>{{ q.framework }} {{ q.meddpicc_points }}/{{ q.meddpicc_max }} · ICP fit {{ q.fit_score }}/100 · <b>{{ q.priority }}</b></p>
+  <div class="tbl"><table><tr><th>Known</th><th>Unknown / to confirm</th></tr><tr>
+    <td><ul class="tight">{% for x in q.known %}<li>{{ x }}</li>{% endfor %}</ul></td>
+    <td><ul class="tight">{% for x in q.missing %}<li>{{ x }}</li>{% endfor %}</ul></td></tr></table></div>
+  <h3>Top 3 research findings</h3>
+  <ol>{% for t in h.draft.top_findings %}{% set f = finding.get(t.finding_id) %}<li><b>{{ f.claim }}</b> {{ fref(t.finding_id) }} {{ srclink(f.source_id) }}<br>{{ t.why_ae_should_care }}</li>{% endfor %}</ol>
+  <h3>Recommended case study</h3>
+  {% if cs.primary %}<p><a href="{{ cs.primary.url }}" target="_blank">{{ cs.primary.title or cs.primary.url }}</a> — {{ cs.explanation.why_strongest if cs.explanation else '' }}</p>{% else %}<p>None found.</p>{% endif %}
+  <h3>Suggested next step</h3>
+  <p class="lede"><b>{{ h.draft.next_step.action }}</b></p>
+  <p>Owner: {{ h.draft.next_step.owner }} · Timing: {{ h.draft.next_step.timing }}</p>
+  <p>{{ h.draft.next_step.rationale }}</p>
+  <p><b>Agenda</b></p><ol class="tight">{% for a in h.draft.next_step.agenda %}<li>{{ a }}</li>{% endfor %}</ol>
+  <p><b>First-call questions</b></p><ul class="tight">{% for x in h.draft.first_call_questions %}<li>{{ x }}</li>{% endfor %}</ul>
+  {% if h.draft.watch_outs %}<p><b>Watch-outs</b></p><ul class="tight">{% for x in h.draft.watch_outs %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+  <p class="meta">Go-to-market: {{ gtm.motion }}{% if gtm.shortlist %} with {{ gtm.shortlist|map(attribute='name')|join(', ') }}{% endif %}.{% if h.issues %} <span class="flag">{{ h.issues|join('; ') }}</span>{% endif %}</p>
+</section>
+
+<!-- ================= APPENDIX ================= -->
+<section class="card">
+  <h2>Appendix</h2>
+  <details><summary>Sources ({{ r.sources|length }})</summary>
+    <div class="tbl"><table><tr><th>Id</th><th>Title</th><th>Kind</th><th>Used for</th></tr>
+      {% for s in r.sources %}<tr><td><span class="sid">{{ s.id }}</span></td><td><a href="{{ s.url if not s.url.startswith('inbound') else '#input' }}" target="_blank">{{ s.title }}</a></td><td>{{ s.kind }}</td><td>{{ s.tags|join(', ') }}</td></tr>{% endfor %}
+    </table></div></details>
+  <details><summary>Rejected claims ({{ r.rejected|length }}) — removed by the grounding gate</summary>
+    <div class="tbl"><table><tr><th>Stage</th><th>Claim</th><th>Source</th><th>Reason</th></tr>
+      {% for x in r.rejected %}<tr><td>{{ x.stage }}</td><td>{{ x.claim }}</td><td>{{ x.source_id }}</td><td>{{ x.reason }}</td></tr>{% endfor %}
+    </table></div></details>
+  <details><summary>Search queries ({{ r.queries_run|length }})</summary>
+    <ul class="tight">{% for x in r.queries_run %}<li><b>{{ x.dimension }}</b>: {{ x.query }} <span class="meta">— {{ x.why }}</span></li>{% endfor %}</ul></details>
+</section>
+</main></body></html>

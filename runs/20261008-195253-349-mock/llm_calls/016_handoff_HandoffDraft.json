@@ -1,0 +1,69 @@
+{
+  "schema": "HandoffDraft",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: write the AE handoff brief. The AE has 2 minutes. Be specific and actionable.\n- who_he_is: only what is known from the email and verified research; say plainly if he is not publicly verified.\n- others_involved: verified people (with finding ids) and inferred roles (marked inferred_from_role).\n- top_findings: exactly 3 finding ids from the verified list, with why each matters for the deal.\n- next_step: one concrete action with owner, timing and agenda, consistent with the go-to-market motion.\nNever invent names, numbers or dates.",
+  "user": "<email>\nFrom: Rodrigo Castillo (r.castillo@sqm.cl)\nTitle: Head of Operations, Northern Operations Division\nCompany: Sociedad Quimica y Minera de Chile (SQM), Chile\nSubject: Autonomous inspection for our Atacama lithium sites\nContext: Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous. Referred by Anglo American. Internal budget conversation scheduled for Q3.\n</email>\n<qualification>MEDDPICC 1/16; ICP fit 0/100; P4 - Disqualify / redirect\nKnown:\n- Metrics: [mock what_we_know]\nMissing:\n- Metrics: [mock what_is_missing]\n- Economic Buyer: Not assessed\n- Decision Criteria: Not assessed\n- Decision Process: Not assessed\n- Paper Process: Not assessed\n- Identify Pain: Not assessed\n- Champion: Not assessed\n- Competition: Not assessed\nAmbiguities: [mock ambiguities]; [mock ambiguities]\nRisks: [mock risks]; [mock risks]\n</qualification>\n<sender_verification>No public source found that names Rodrigo Castillo at [mock company_short_name]. Title and division are taken from the contact form only and must be confirmed.</sender_verification>\n<verified_findings>\n\n</verified_findings>\n<positioning>[mock thesis]</positioning>\n<stakeholders>[{'name_or_role': '[mock name_or_role]', 'why_involved': '[mock why_involved]', 'basis': 'inferred_from_role', 'finding_ids': []}, {'name_or_role': '[mock name_or_role]', 'why_involved': '[mock why_involved]', 'basis': 'inferred_from_role', 'finding_ids': []}]</stakeholders>\n<case_study>https://flytbase.com/case-studies/mining-site-inspection — [mock why_strongest]</case_study>\n<go_to_market>Direct AE engagement; partner type System Integrator (to recruit); shortlist []; [mock rationale]</go_to_market>\n<sequence_status>2-email sequence; email 1 goal: [mock goal]</sequence_status>",
+  "response": {
+    "who_he_is": "[mock who_he_is]",
+    "what_he_cares_about": [
+      "[mock what_he_cares_about]",
+      "[mock what_he_cares_about]"
+    ],
+    "others_involved": [
+      {
+        "name_or_role": "[mock name_or_role]",
+        "why_involved": "[mock why_involved]",
+        "basis": "verified",
+        "finding_ids": [
+          "[mock finding_ids]",
+          "[mock finding_ids]"
+        ]
+      },
+      {
+        "name_or_role": "[mock name_or_role]",
+        "why_involved": "[mock why_involved]",
+        "basis": "verified",
+        "finding_ids": [
+          "[mock finding_ids]",
+          "[mock finding_ids]"
+        ]
+      }
+    ],
+    "top_findings": [
+      {
+        "finding_id": "S1",
+        "why_ae_should_care": "[mock why_ae_should_care]"
+      },
+      {
+        "finding_id": "S1",
+        "why_ae_should_care": "[mock why_ae_should_care]"
+      }
+    ],
+    "next_step": {
+      "action": "[mock action]",
+      "owner": "[mock owner]",
+      "timing": "[mock timing]",
+      "rationale": "[mock rationale]",
+      "agenda": [
+        "[mock agenda]",
+        "[mock agenda]"
+      ]
+    },
+    "first_call_questions": [
+      "[mock first_call_questions]",
+      "[mock first_call_questions]"
+    ],
+    "watch_outs": [
+      "[mock watch_outs]",
+      "[mock watch_outs]"
+    ]
+  },
+  "valid": true
+}

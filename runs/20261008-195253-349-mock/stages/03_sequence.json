@@ -1,0 +1,84 @@
+{
+  "draft": {
+    "strategy": "[mock strategy]",
+    "tone_notes": "[mock tone_notes]",
+    "emails": [
+      {
+        "step": 3,
+        "send_timing": "[mock send_timing]",
+        "trigger": "[mock trigger]",
+        "goal": "[mock goal]",
+        "unknowns_targeted": [
+          "Metrics",
+          "Metrics"
+        ],
+        "finding_ids": [
+          "[mock finding_ids]",
+          "[mock finding_ids]"
+        ],
+        "materials": [
+          "[mock materials]",
+          "[mock materials]"
+        ],
+        "subject": "[mock subject]",
+        "body": "[mock body]",
+        "why_this_step": "[mock why_this_step]"
+      },
+      {
+        "step": 3,
+        "send_timing": "[mock send_timing]",
+        "trigger": "[mock trigger]",
+        "goal": "[mock goal]",
+        "unknowns_targeted": [
+          "Metrics",
+          "Metrics"
+        ],
+        "finding_ids": [
+          "[mock finding_ids]",
+          "[mock finding_ids]"
+        ],
+        "materials": [
+          "[mock materials]",
+          "[mock materials]"
+        ],
+        "subject": "[mock subject]",
+        "body": "[mock body]",
+        "why_this_step": "[mock why_this_step]"
+      }
+    ],
+    "reply_branches": [
+      {
+        "if_reply": "[mock if_reply]",
+        "next_move": "[mock next_move]"
+      },
+      {
+        "if_reply": "[mock if_reply]",
+        "next_move": "[mock next_move]"
+      }
+    ]
+  },
+  "coverage": {
+    "Metrics": [
+      3,
+      3
+    ],
+    "Economic Buyer": [],
+    "Decision Criteria": [],
+    "Decision Process": [],
+    "Paper Process": [],
+    "Identify Pain": [],
+    "Champion": [],
+    "Competition": []
+  },
+  "issues": [
+    "email 3: cites unknown finding ids ['[mock finding_ids]', '[mock finding_ids]']",
+    "email 3: uses no verified research finding",
+    "email 3: contains a placeholder",
+    "email 3: cites unknown finding ids ['[mock finding_ids]', '[mock finding_ids]']",
+    "email 3: uses no verified research finding",
+    "email 3: contains a placeholder",
+    "MEDDPICC gaps never targeted: ['Economic Buyer', 'Decision Criteria', 'Decision Process', 'Paper Process', 'Identify Pain', 'Champion', 'Competition']",
+    "recommended proof content https://flytbase.com/case-studies/mining-site-inspection is not used in any email"
+  ],
+  "revisions": 2
+}

@@ -1,0 +1,51 @@
+{
+  "company_legal_name": "[mock company_legal_name]",
+  "company_short_name": "[mock company_short_name]",
+  "company_name_variants": [
+    "[mock company_name_variants]",
+    "[mock company_name_variants]"
+  ],
+  "hq_country": "[mock hq_country]",
+  "region": "[mock region]",
+  "region_markets": [
+    "[mock region_markets]",
+    "[mock region_markets]"
+  ],
+  "industry": "[mock industry]",
+  "sub_industry": "[mock sub_industry]",
+  "use_case": "[mock use_case]",
+  "asset_or_site_types": [
+    "[mock asset_or_site_types]",
+    "[mock asset_or_site_types]"
+  ],
+  "site_count": 3,
+  "site_locations": [
+    "[mock site_locations]",
+    "[mock site_locations]"
+  ],
+  "operating_conditions": [
+    "[mock operating_conditions]",
+    "[mock operating_conditions]"
+  ],
+  "stated_pains": [
+    "[mock stated_pains]",
+    "[mock stated_pains]"
+  ],
+  "referral_entities": [
+    "[mock referral_entities]",
+    "[mock referral_entities]"
+  ],
+  "timeline_signals": [
+    "[mock timeline_signals]",
+    "[mock timeline_signals]"
+  ],
+  "budget_signals": [
+    "[mock budget_signals]",
+    "[mock budget_signals]"
+  ],
+  "seniority": "C-level",
+  "matching_keywords": [
+    "[mock matching_keywords]",
+    "[mock matching_keywords]"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "run_id": "20261008-203822-732",
+  "run_date": "2026-10-08",
+  "seconds": 520.0,
+  "llm": "openai:gemini-3-flash-preview",
+  "search": "tavily",
+  "mock": false,
+  "stages": [
+    {
+      "stage": "profile",
+      "title": "Stage 0 \u00b7 Intake: parse email, build lead profile",
+      "seconds": 2.9,
+      "status": "ok",
+      "llm_calls": 1,
+      "llm_input_tokens": 1091,
+      "llm_output_tokens": 299,
+      "searches": 0,
+      "fetches": 0,
+      "fetch_failures": 0,
+      "cache_hits": 0
+    },
+    {
+      "stage": "qualification",
+      "title": "Stage 1 \u00b7 Qualification (MEDDPICC + ICP fit)",
+      "seconds": 27.4,
+      "status": "ok",
+      "llm_calls": 1,
+      "llm_input_tokens": 1978,
+      "llm_output_tokens": 1975,
+      "searches": 0,
+      "fetches": 0,
+      "fetch_failures": 0,
+      "cache_hits": 0
+    },
+    {
+      "stage": "research",
+      "title": "Stage 2 \u00b7 Deep account research (grounded)",
+      "seconds": 322.4,
+      "status": "ok",
+      "llm_calls": 6,
+      "llm_input_tokens": 32073,
+      "llm_output_tokens": 7126,
+      "searches": 15,
+      "fetches": 25,
+      "fetch_failures": 14,
+      "cache_hits": 12
+    },
+    {
+      "stage": "case_study",
+      "title": "Stage 4 \u00b7 Case study & material matching",
+      "seconds": 51.9,
+      "status": "ok",
+      "llm_calls": 2,
+      "llm_input_tokens": 12180,
+      "llm_output_tokens": 1184,
+      "searches": 3,
+      "fetches": 40,
+      "fetch_failures": 0,
+      "cache_hits": 0
+    },
+    {
+      "stage": "gtm",
+      "title": "Stage 5 \u00b7 Partner identification & GTM motion",
+      "seconds": 65.0,
+      "status": "ok",
+      "llm_calls": 2,
+      "llm_input_tokens": 5454,
+      "llm_output_tokens": 8485,
+      "searches": 2,
+      "fetches": 3,
+      "fetch_failures": 0,
+      "cache_hits": 10
+    },
+    {
+      "stage": "sequence",
+      "title": "Stage 3 \u00b7 Adaptive response sequence",
+      "seconds": 34.7,
+      "status": "ok",
+      "llm_calls": 1,
+      "llm_input_tokens": 3707,
+      "llm_output_tokens": 1820,
+      "searches": 0,
+      "fetches": 0,
+      "fetch_failures": 0,
+      "cache_hits": 0
+    },
+    {
+      "stage": "handoff",
+      "title": "Stage 6 \u00b7 AE handoff summary",
+      "seconds": 15.6,
+      "status": "ok",
+      "llm_calls": 1,
+      "llm_input_tokens": 4580,
+      "llm_output_tokens": 1055,
+      "searches": 0,
+      "fetches": 0,
+      "fetch_failures": 0,
+      "cache_hits": 0
+    }
+  ],
+  "counters": {
+    "llm_calls": 14,
+    "llm_input_tokens": 61063,
+    "llm_output_tokens": 21944,
+    "searches": 20,
+    "fetches": 68,
+    "fetch_failures": 14,
+    "cache_hits": 22
+  }
+}

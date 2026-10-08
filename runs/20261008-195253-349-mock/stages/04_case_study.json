@@ -1,0 +1,124 @@
+{
+  "referral_entities": [
+    "[mock referral_entities]",
+    "[mock referral_entities]"
+  ],
+  "referral_linked_urls": [],
+  "discovery_stats": {
+    "sitemap_urls": 3,
+    "default_language_urls": 2,
+    "pool": 2,
+    "fetched": 2,
+    "rubric_scored": 2,
+    "site_search_hits": 0
+  },
+  "ranked": [
+    {
+      "url": "https://flytbase.com/case-studies/mining-site-inspection",
+      "section": "case-studies",
+      "title": "Page https://flytbase.com/case-studies/mining-site-inspection",
+      "source_id": "S16",
+      "discovered_via": [
+        "sitemap"
+      ],
+      "slug_score": 2.0,
+      "referral_mentions": 0,
+      "referral_entities_found": [],
+      "industry_share": 0.286,
+      "region_hit": 0.0,
+      "section_weight": 1.0,
+      "rubric": null,
+      "rubric_quote_verified": null,
+      "components": {
+        "rubric": 0.0,
+        "referral": 0.0,
+        "region": 0.0,
+        "industry": 0.286,
+        "section": 1.0
+      },
+      "final_score": 7.9
+    },
+    {
+      "url": "https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine",
+      "section": "blog",
+      "title": "Page https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine",
+      "source_id": "S17",
+      "discovered_via": [
+        "sitemap"
+      ],
+      "slug_score": 3.8,
+      "referral_mentions": 0,
+      "referral_entities_found": [],
+      "industry_share": 0.143,
+      "region_hit": 0.0,
+      "section_weight": 0.8,
+      "rubric": null,
+      "rubric_quote_verified": null,
+      "components": {
+        "rubric": 0.0,
+        "referral": 0.0,
+        "region": 0.0,
+        "industry": 0.143,
+        "section": 0.8
+      },
+      "final_score": 5.4
+    }
+  ],
+  "primary": {
+    "url": "https://flytbase.com/case-studies/mining-site-inspection",
+    "section": "case-studies",
+    "title": "Page https://flytbase.com/case-studies/mining-site-inspection",
+    "source_id": "S16",
+    "discovered_via": [
+      "sitemap"
+    ],
+    "slug_score": 2.0,
+    "referral_mentions": 0,
+    "referral_entities_found": [],
+    "industry_share": 0.286,
+    "region_hit": 0.0,
+    "section_weight": 1.0,
+    "rubric": null,
+    "rubric_quote_verified": null,
+    "components": {
+      "rubric": 0.0,
+      "referral": 0.0,
+      "region": 0.0,
+      "industry": 0.286,
+      "section": 1.0
+    },
+    "final_score": 7.9
+  },
+  "supporting": [
+    {
+      "url": "https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine",
+      "section": "blog",
+      "title": "Page https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine",
+      "source_id": "S17",
+      "discovered_via": [
+        "sitemap"
+      ],
+      "slug_score": 3.8,
+      "referral_mentions": 0,
+      "referral_entities_found": [],
+      "industry_share": 0.143,
+      "region_hit": 0.0,
+      "section_weight": 0.8,
+      "rubric": null,
+      "rubric_quote_verified": null,
+      "components": {
+        "rubric": 0.0,
+        "referral": 0.0,
+        "region": 0.0,
+        "industry": 0.143,
+        "section": 0.8
+      },
+      "final_score": 5.4
+    }
+  ],
+  "explanation": {
+    "why_strongest": "[mock why_strongest]",
+    "how_to_use_in_sales": "[mock how_to_use_in_sales]",
+    "gaps_vs_lead": "[mock gaps_vs_lead]"
+  }
+}

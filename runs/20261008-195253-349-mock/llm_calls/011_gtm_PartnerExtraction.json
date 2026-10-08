@@ -1,0 +1,38 @@
+{
+  "schema": "PartnerExtraction",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: extract the vendor's channel partners from its partner pages: name, country, tier, partner types.\nOnly list organisations the page presents as partners. evidence_quote must be the verbatim text from the page\nthat contains the partner name (the listing line/card text).\nGrounding rules (strict):\n- Use ONLY the text provided inside <sources> or <email>. Do not use prior knowledge for facts.\n- Every evidence_quote must be copied character-for-character from the cited text (15-60 words,\n  one contiguous span, no paraphrase, no ellipsis). A program will check it; non-matching claims are discarded.\n- If the provided text does not support something, leave it out or mark it unknown. Never guess names,\n  numbers, dates or titles.\n",
+  "user": "<sources>\n<source id=\"S18\" url=\"https://flytbase.com/partner\">\nPage https://flytbase.com/partner\nPartners\nMock page text about mining operations, autonomous drone docks and inspection in Chile.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nMock Partner One Chile Gold System Integrator\n</source>\n</sources>",
+  "response": {
+    "partners": [
+      {
+        "name": "[mock name]",
+        "country": "[mock country]",
+        "tier": "[mock tier]",
+        "types": [
+          "[mock types]",
+          "[mock types]"
+        ],
+        "evidence_quote": "[mock evidence_quote]"
+      },
+      {
+        "name": "[mock name]",
+        "country": "[mock country]",
+        "tier": "[mock tier]",
+        "types": [
+          "[mock types]",
+          "[mock types]"
+        ],
+        "evidence_quote": "[mock evidence_quote]"
+      }
+    ]
+  },
+  "valid": true
+}

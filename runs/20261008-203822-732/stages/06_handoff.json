@@ -1,0 +1,110 @@
+{
+  "draft": {
+    "who_he_is": "Rodrigo Castillo is the Head of Operations for the Northern Operations Division at SQM. While his title is provided via the contact form, his identity and specific role at SQM are not yet publicly verified through external sources.",
+    "what_he_cares_about": [
+      "Reducing high costs associated with contracted manual inspection crews",
+      "Mitigating physical hazards for personnel working in the Atacama Desert",
+      "Implementing 24/7 autonomous inspection for large-scale lithium sites",
+      "Securing budget for operational technology in the upcoming Q3 cycle"
+    ],
+    "others_involved": [
+      {
+        "name_or_role": "Carlos Díaz O.",
+        "why_involved": "CEO of Novandino Litio; primary decision-maker for technology adoption within the critical SQM-CODELCO lithium partnership.",
+        "basis": "verified",
+        "finding_ids": [
+          "F02"
+        ]
+      },
+      {
+        "name_or_role": "Felipe Smith",
+        "why_involved": "Head of Lithium & Potassium division; oversees the highest revenue-generating segment where autonomous efficiency gains are most impactful.",
+        "basis": "verified",
+        "finding_ids": [
+          "F06"
+        ]
+      },
+      {
+        "name_or_role": "Antonio Gil N.",
+        "why_involved": "Member of the Safety, Health and Environment Committee; interested in technologies that reduce personnel exposure to hazardous desert conditions.",
+        "basis": "verified",
+        "finding_ids": [
+          "F07"
+        ]
+      },
+      {
+        "name_or_role": "Chief Financial Officer (CFO)",
+        "why_involved": "Likely required for final sign-off on capital expenditures related to the US$300M annual sustaining capital budget.",
+        "basis": "inferred_from_role",
+        "finding_ids": []
+      }
+    ],
+    "top_findings": [
+      {
+        "finding_id": "F01",
+        "why_ae_should_care": "The new SQM-CODELCO joint venture (Novandino Litio) means the solution must meet the operational and safety standards of both entities, increasing the complexity of the stakeholder map."
+      },
+      {
+        "finding_id": "F09",
+        "why_ae_should_care": "SQM has a US$3B Capex plan for 2026-2028, with 60% dedicated to Novandino, confirming that significant capital is available for technology that scales lithium production."
+      },
+      {
+        "finding_id": "F08",
+        "why_ae_should_care": "With over 2,700 contractors at the Salar de Atacama site, there is a massive opportunity to replace expensive, high-risk manual labor with autonomous drone docks."
+      }
+    ],
+    "next_step": {
+      "action": "Discovery Call & Anglo American Case Review",
+      "owner": "Account Executive",
+      "timing": "Within 48 hours",
+      "rationale": "Leverage the Anglo American referral immediately to establish credibility and clarify the 'Q3' budget timeline ambiguity.",
+      "agenda": [
+        "Validate Rodrigo's role and influence within the Novandino Litio JV",
+        "Review Anglo American's autonomous deployment in Peru as a blueprint for Atacama",
+        "Clarify the Q3 budget conversation timeline and required technical validation steps",
+        "Identify specific site connectivity and environmental constraints for the 3 desert sites"
+      ]
+    },
+    "first_call_questions": [
+      "Can you clarify the Q3 budget timeline—are we looking at a 2027 fiscal cycle or an immediate 2026 window?",
+      "Who from the Novandino Litio JV or the Safety Committee needs to be involved in the technical validation?",
+      "What are the specific KPIs for 'expensive' contracted crews that we need to beat to justify the Capex?",
+      "What is the current connectivity infrastructure (LTE/Starlink) at the three Atacama sites?"
+    ],
+    "watch_outs": [
+      "The 'Q3' budget reference is ambiguous as Q3 2026 has passed; it may refer to a 2027 cycle.",
+      "Extreme environmental conditions in the Atacama may require specialized hardware beyond standard drone-in-a-box specs.",
+      "The sender's identity is not yet publicly verified; confirm his reporting line to Felipe Smith or Carlos Díaz."
+    ]
+  },
+  "top_findings_resolved": [
+    {
+      "id": "F01",
+      "dimension": "org_structure",
+      "claim": "SQM has established a new joint venture entity called Novandino Litio (also referred to as Nova Andino Litio) in partnership with the Chilean state-owned mining company CODELCO.",
+      "source_id": "S8",
+      "evidence_quote": "The first quarter of 2026 marked our first full quarter operating alongside CODELCO through our partnership Nova Andino Litio, and the results underscore the strength of this partnership.",
+      "date_or_period": "May 2026",
+      "so_what": "This partnership represents a critical shift in how SQM's lithium operations are governed; autonomous drone solutions must align with the operational standards of both SQM and CODELCO."
+    },
+    {
+      "id": "F09",
+      "dimension": "budget_signals",
+      "claim": "SQM projects a total capital expenditure of approximately US$3 billion for the three-year period spanning 2026 to 2028.",
+      "source_id": "S4",
+      "evidence_quote": "We expect capital expenditures to be approximately US$3 billion over the three-year period from 2026 to 2028. The breakdown is as follows: approximately 60% for Novandino, 20% for the Iodine and Plant Nutrition Division",
+      "date_or_period": "2026-2028",
+      "so_what": "This massive budget allocation, particularly the 60% for Novandino, indicates significant capital available for technology that improves operational efficiency in the Atacama Desert."
+    },
+    {
+      "id": "F08",
+      "dimension": "org_structure",
+      "claim": "The Salar de Atacama mine site employed 1,640 staff and 2,775 contractors as of mid-2025, highlighting a large workforce to manage in a remote area.",
+      "source_id": "S9",
+      "evidence_quote": "# Employees / contractors: 1,640 employees and 2,775 contractors at the time of audit",
+      "date_or_period": "July 2025",
+      "so_what": "The high ratio of contractors to employees suggests a complex organizational footprint where autonomous drones can provide consistent, standardized oversight without increasing headcount."
+    }
+  ],
+  "issues": []
+}

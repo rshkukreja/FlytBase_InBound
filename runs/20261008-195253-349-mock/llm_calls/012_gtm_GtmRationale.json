@@ -1,0 +1,23 @@
+{
+  "schema": "GtmRationale",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: the go-to-market motion has been decided by rules (decision trace provided). Write the rationale an\ninbound manager would sign off on: why this motion, what the AE owns, what the partner owns, risks.\nDo not change the decision. Refer to partners only by the names provided.",
+  "user": "Lead: Head of Operations, Northern Operations Division, [mock company_legal_name], [mock hq_country] ([mock region]). [mock use_case]; 3 sites.\nComplexity factors: {'multi_site (>=2 sites in scope)': True, 'continuous_ops (24/7)': False, 'enterprise_buyer (files annual report with a securities regulator)': False, 'harsh_or_remote_environment': True, 'autonomous/BVLOS operations (regulatory approval likely)': True, 'strategic_referral (existing-customer relationship to protect)': True, 'senior_buyer (VP/Head or above)': True}\nDecision trace:\n- Deal complexity: high.\n- Partners in lead's country: 0; elsewhere in region: 0.\n- Rule: high complexity + no regional partner -> direct AE engagement; recruit a local integrator.\nRecommended partner type: System Integrator (to recruit)\nShortlist: []",
+  "response": {
+    "rationale": "[mock rationale]",
+    "ae_role": "[mock ae_role]",
+    "partner_role": "[mock partner_role]",
+    "risks": [
+      "[mock risks]",
+      "[mock risks]"
+    ]
+  },
+  "valid": true
+}

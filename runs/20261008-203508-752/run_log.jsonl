@@ -1,0 +1,4 @@
+{"t": 1791471909.655, "stage": "profile", "kind": "info", "msg": "parsed: Rodrigo Castillo <r.castillo@sqm.cl> | Head of Operations, Northern Operations Division | Sociedad Quimica y Minera de Chile (SQM), Chile"}
+{"t": 1791471925.978, "stage": "profile", "kind": "llm_call", "file": "001_profile_LeadProfile.json", "schema": "LeadProfile", "seconds": 16.32}
+{"t": 1791471925.98, "stage": "profile", "kind": "info", "msg": "industry=Mining | use_case=Autonomous inspection | region=LATAM | referrals=['Anglo American']"}
+{"t": 1791471925.981, "stage": "profile", "kind": "stage_done", "seconds": 16.3, "status": "ok", "llm_calls": 1, "llm_input_tokens": 1091, "llm_output_tokens": 300, "searches": 0, "fetches": 0, "fetch_failures": 0, "cache_hits": 0}

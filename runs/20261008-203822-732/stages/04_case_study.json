@@ -1,0 +1,500 @@
+{
+  "referral_entities": [
+    "Anglo American"
+  ],
+  "referral_linked_urls": [
+    "https://flytbase.com/case-studies/anglo-american-autonomous-mining-drones-peru-case-study",
+    "https://flytbase.com/webinars/anglo-americans-docked-drones-transforming-mining-operations",
+    "https://flytbase.com/case-studies/sqm-678-km2-mine-autonomous-inspection-adentu-and-flytbase",
+    "https://flytbase.com/blog/latam-mines-security-costs-drones",
+    "https://flytbase.com/blog/hidden-safety-crisis-industrial-inspections",
+    "https://flytbase.com/blog/predictive-ai-asset-monitoring-latam-refineries-drones",
+    "https://flytbase.com/blog/anglo-american-deploys-drone-in-a-box-solution-at-quellaveco",
+    "https://flytbase.com/case-studies/kansanshi-mining-plc-transformed-mine-security-to-proactive-uav-surveillance",
+    "https://flytbase.com/industries/mining",
+    "https://flytbase.com/case-studies"
+  ],
+  "discovery_stats": {
+    "sitemap_urls": 2934,
+    "default_language_urls": 311,
+    "pool": 314,
+    "fetched": 30,
+    "rubric_scored": 10,
+    "site_search_hits": 23
+  },
+  "ranked": [
+    {
+      "url": "https://flytbase.com/case-studies/anglo-american-autonomous-mining-drones-peru-case-study",
+      "section": "case-studies",
+      "title": "How Anglo American Uses Autonomous Drones to Transform Mining Safety in Peru | FlytBase Case Study | FlytBase",
+      "source_id": "S18",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com \"Anglo American\"",
+        "search: site:flytbase.com Lithium Extraction case study"
+      ],
+      "slug_score": 13.0,
+      "referral_mentions": 19,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 0.615,
+      "region_hit": 0.6,
+      "section_weight": 1.0,
+      "rubric": {
+        "source_id": "S18",
+        "industry_fit": 5,
+        "use_case_fit": 4,
+        "environment_fit": 5,
+        "proof_strength": 5,
+        "evidence_quote": "By replacing manual drone flights with autonomous operations powered by FlytBase's AI-driven platform, the mining giant has eliminated time-consuming truck transport between survey locations while enhancing personnel safety in challenging mountainous terrain.",
+        "summary": "Case study of a major mining company (Anglo American) using autonomous drones for mapping and safety in Peru."
+      },
+      "rubric_quote_verified": true,
+      "components": {
+        "rubric": 0.95,
+        "referral": 1.0,
+        "region": 0.6,
+        "industry": 0.615,
+        "section": 1.0
+      },
+      "final_score": 87.9
+    },
+    {
+      "url": "https://flytbase.com/webinars/anglo-americans-docked-drones-transforming-mining-operations",
+      "section": "webinars",
+      "title": "How Anglo American's Docked Drones Are Transforming Everyday Mining Operations | FlytBase | FlytBase",
+      "source_id": "S33",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com \"Anglo American\""
+      ],
+      "slug_score": 11.85,
+      "referral_mentions": 6,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 0.615,
+      "region_hit": 0.6,
+      "section_weight": 0.85,
+      "rubric": {
+        "source_id": "S33",
+        "industry_fit": 5,
+        "use_case_fit": 5,
+        "environment_fit": 4,
+        "proof_strength": 4,
+        "evidence_quote": "What began as a single proof of concept has grown into daily photogrammetry and dust monitoring missions , fully automated and remotely managed from office control rooms.",
+        "summary": "Webinar detailing daily autonomous inspection and monitoring missions at a Peruvian mine."
+      },
+      "rubric_quote_verified": true,
+      "components": {
+        "rubric": 0.9,
+        "referral": 1.0,
+        "region": 0.6,
+        "industry": 0.615,
+        "section": 0.85
+      },
+      "final_score": 84.9
+    },
+    {
+      "url": "https://flytbase.com/case-studies/sqm-678-km2-mine-autonomous-inspection-adentu-and-flytbase",
+      "section": "case-studies",
+      "title": "How SQM Turned a 678 km² Mine into an Autonomous Inspection Zone | FlytBase | FlytBase",
+      "source_id": "S21",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com Mining Autonomous inspection",
+        "search: site:flytbase.com Lithium Extraction case study"
+      ],
+      "slug_score": 5.0,
+      "referral_mentions": 1,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 1.0,
+      "region_hit": 1.0,
+      "section_weight": 1.0,
+      "rubric": {
+        "source_id": "S21",
+        "industry_fit": 5,
+        "use_case_fit": 5,
+        "environment_fit": 5,
+        "proof_strength": 5,
+        "evidence_quote": "SQM, a global leader in lithium, iodine, and nitrate production, partnered with Adentu and FlytBase to bring autonomy from concept to daily routine across its 678 km² mining operation in northern Chile.",
+        "summary": "Direct match: lithium mining in Chile using autonomous drones for daily inspections across a massive site."
+      },
+      "rubric_quote_verified": true,
+      "components": {
+        "rubric": 1.0,
+        "referral": 0.333,
+        "region": 1.0,
+        "industry": 1.0,
+        "section": 1.0
+      },
+      "final_score": 83.3
+    },
+    {
+      "url": "https://flytbase.com/blog/latam-mines-security-costs-drones",
+      "section": "blog",
+      "title": "How LATAM Mines Are Cutting Security Costs by 50% with Autonomous Drones | FlytBase",
+      "source_id": "S37",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com Mining Autonomous inspection"
+      ],
+      "slug_score": 5.8,
+      "referral_mentions": 2,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 0.692,
+      "region_hit": 1.0,
+      "section_weight": 0.8,
+      "rubric": {
+        "source_id": "S37",
+        "industry_fit": 5,
+        "use_case_fit": 3,
+        "environment_fit": 4,
+        "proof_strength": 4,
+        "evidence_quote": "In Chile and Peru, where guard salaries have risen nearly 30% in the past five years, mining companies are struggling to contain spiraling security costs. Large, remote sites often spend milli",
+        "summary": "Discusses cost reduction for remote mining sites in Chile and Peru, though focused more on security than inspection."
+      },
+      "rubric_quote_verified": true,
+      "components": {
+        "rubric": 0.8,
+        "referral": 0.667,
+        "region": 1.0,
+        "industry": 0.692,
+        "section": 0.8
+      },
+      "final_score": 78.6
+    },
+    {
+      "url": "https://flytbase.com/blog/hidden-safety-crisis-industrial-inspections",
+      "section": "blog",
+      "title": "The Hidden Safety Crisis in Industrial Inspections | FlytBase",
+      "source_id": "S41",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com \"Anglo American\""
+      ],
+      "slug_score": 4.8,
+      "referral_mentions": 3,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 0.615,
+      "region_hit": 0.6,
+      "section_weight": 0.8,
+      "rubric": {
+        "source_id": "S41",
+        "industry_fit": 3,
+        "use_case_fit": 4,
+        "environment_fit": 3,
+        "proof_strength": 2,
+        "evidence_quote": "Every industrial operation has safety protocols. Every facility has inspection schedules. Yet, across refineries, mines, and utility sites, one quiet truth remains: people still walk into risk zones every day",
+        "summary": "General blog on the safety benefits of autonomous inspections in hazardous industrial environments including mines."
+      },
+      "rubric_quote_verified": true,
+      "components": {
+        "rubric": 0.6,
+        "referral": 1.0,
+        "region": 0.6,
+        "industry": 0.615,
+        "section": 0.8
+      },
+      "final_score": 71.2
+    },
+    {
+      "url": "https://flytbase.com/blog/predictive-ai-asset-monitoring-latam-refineries-drones",
+      "section": "blog",
+      "title": "Predictive AI Monitoring for LATAM Refineries | FlytBase | FlytBase",
+      "source_id": "S42",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com \"Anglo American\""
+      ],
+      "slug_score": 4.8,
+      "referral_mentions": 2,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 0.692,
+      "region_hit": 1.0,
+      "section_weight": 0.8,
+      "rubric": {
+        "source_id": "S42",
+        "industry_fit": 1,
+        "use_case_fit": 4,
+        "environment_fit": 3,
+        "proof_strength": 2,
+        "evidence_quote": "Unplanned downtime costs LATAM refineries hundreds of thousands of dollars per hour. Yet, 85% of operators still rely on manual inspections that take weeks to complete and often miss early warning signs.",
+        "summary": "Focuses on LATAM refineries, but relevant for the inspection use case and remote operational pains."
+      },
+      "rubric_quote_verified": true,
+      "components": {
+        "rubric": 0.5,
+        "referral": 0.667,
+        "region": 1.0,
+        "industry": 0.692,
+        "section": 0.8
+      },
+      "final_score": 65.1
+    },
+    {
+      "url": "https://flytbase.com/blog/anglo-american-deploys-drone-in-a-box-solution-at-quellaveco",
+      "section": "blog",
+      "title": "FlytBase Powers First Autonomous Drone System in Peruvian Mining for Anglo American | FlytBase",
+      "source_id": "S34",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com \"Anglo American\"",
+        "search: site:flytbase.com Mining Autonomous inspection"
+      ],
+      "slug_score": 10.8,
+      "referral_mentions": 9,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 0.615,
+      "region_hit": 0.6,
+      "section_weight": 0.8,
+      "rubric": {
+        "source_id": "S34",
+        "industry_fit": 5,
+        "use_case_fit": 5,
+        "environment_fit": 4,
+        "proof_strength": 4,
+        "evidence_quote": "The drone-in-a-box solution, powered by FlytBase, now performs scheduled aerial inspections at its Quellaveco mine, making it the first mining project in Peru to adopt automated drone operations.",
+        "summary": "Blog post confirming the first autonomous drone inspection deployment in Peruvian mining."
+      },
+      "rubric_quote_verified": false,
+      "components": {
+        "rubric": 0.45,
+        "referral": 1.0,
+        "region": 0.6,
+        "industry": 0.615,
+        "section": 0.8
+      },
+      "final_score": 64.4
+    },
+    {
+      "url": "https://flytbase.com/case-studies/kansanshi-mining-plc-transformed-mine-security-to-proactive-uav-surveillance",
+      "section": "case-studies",
+      "title": "Kansanshi Mining Plc (FQM) Transforms Security with UAVs | FlytBase",
+      "source_id": "S32",
+      "discovered_via": [
+        "sitemap"
+      ],
+      "slug_score": 3.0,
+      "referral_mentions": 1,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 0.615,
+      "region_hit": 0.6,
+      "section_weight": 1.0,
+      "rubric": {
+        "source_id": "S32",
+        "industry_fit": 5,
+        "use_case_fit": 2,
+        "environment_fit": 4,
+        "proof_strength": 4,
+        "evidence_quote": "Kansanshi Mining Plc (KMP), one of Africa's largest copper mines, faced persistent security vulnerabilities across a vast operational site in Zambia: organised syndicates exploiting perimeter gaps, limited night-time visibility",
+        "summary": "Mining case study for a large remote site, but focused on security patrols rather than inspection."
+      },
+      "rubric_quote_verified": true,
+      "components": {
+        "rubric": 0.75,
+        "referral": 0.333,
+        "region": 0.6,
+        "industry": 0.615,
+        "section": 1.0
+      },
+      "final_score": 62.2
+    },
+    {
+      "url": "https://flytbase.com/industries/mining",
+      "section": "industries",
+      "title": "Drones for Mining | FlytBase | FlytBase",
+      "source_id": "S44",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com \"Anglo American\"",
+        "search: site:flytbase.com Mining Autonomous inspection",
+        "search: site:flytbase.com Lithium Extraction case study"
+      ],
+      "slug_score": 4.7,
+      "referral_mentions": 1,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 0.615,
+      "region_hit": 0.6,
+      "section_weight": 0.7,
+      "rubric": {
+        "source_id": "S44",
+        "industry_fit": 5,
+        "use_case_fit": 5,
+        "environment_fit": 3,
+        "proof_strength": 2,
+        "evidence_quote": "Deploy automated drone inspections of equipment, conveyors, haul roads, and blast zones, reducing costly downtime through preventive maintenance while enabling continuous operational oversight.",
+        "summary": "Industry page describing specific mining inspection use cases like haul roads and equipment monitoring."
+      },
+      "rubric_quote_verified": true,
+      "components": {
+        "rubric": 0.75,
+        "referral": 0.333,
+        "region": 0.6,
+        "industry": 0.615,
+        "section": 0.7
+      },
+      "final_score": 60.7
+    },
+    {
+      "url": "https://flytbase.com/case-studies",
+      "section": "case-studies",
+      "title": "Customer stories | FlytBase",
+      "source_id": "S31",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com \"Anglo American\""
+      ],
+      "slug_score": 3.0,
+      "referral_mentions": 1,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 0.615,
+      "region_hit": 0.6,
+      "section_weight": 1.0,
+      "rubric": null,
+      "rubric_quote_verified": null,
+      "components": {
+        "rubric": 0.0,
+        "referral": 0.333,
+        "region": 0.6,
+        "industry": 0.615,
+        "section": 1.0
+      },
+      "final_score": 28.5
+    }
+  ],
+  "primary": {
+    "url": "https://flytbase.com/case-studies/anglo-american-autonomous-mining-drones-peru-case-study",
+    "section": "case-studies",
+    "title": "How Anglo American Uses Autonomous Drones to Transform Mining Safety in Peru | FlytBase Case Study | FlytBase",
+    "source_id": "S18",
+    "discovered_via": [
+      "sitemap",
+      "search: site:flytbase.com \"Anglo American\"",
+      "search: site:flytbase.com Lithium Extraction case study"
+    ],
+    "slug_score": 13.0,
+    "referral_mentions": 19,
+    "referral_entities_found": [
+      "Anglo American"
+    ],
+    "industry_share": 0.615,
+    "region_hit": 0.6,
+    "section_weight": 1.0,
+    "rubric": {
+      "source_id": "S18",
+      "industry_fit": 5,
+      "use_case_fit": 4,
+      "environment_fit": 5,
+      "proof_strength": 5,
+      "evidence_quote": "By replacing manual drone flights with autonomous operations powered by FlytBase's AI-driven platform, the mining giant has eliminated time-consuming truck transport between survey locations while enhancing personnel safety in challenging mountainous terrain.",
+      "summary": "Case study of a major mining company (Anglo American) using autonomous drones for mapping and safety in Peru."
+    },
+    "rubric_quote_verified": true,
+    "components": {
+      "rubric": 0.95,
+      "referral": 1.0,
+      "region": 0.6,
+      "industry": 0.615,
+      "section": 1.0
+    },
+    "final_score": 87.9
+  },
+  "supporting": [
+    {
+      "url": "https://flytbase.com/webinars/anglo-americans-docked-drones-transforming-mining-operations",
+      "section": "webinars",
+      "title": "How Anglo American's Docked Drones Are Transforming Everyday Mining Operations | FlytBase | FlytBase",
+      "source_id": "S33",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com \"Anglo American\""
+      ],
+      "slug_score": 11.85,
+      "referral_mentions": 6,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 0.615,
+      "region_hit": 0.6,
+      "section_weight": 0.85,
+      "rubric": {
+        "source_id": "S33",
+        "industry_fit": 5,
+        "use_case_fit": 5,
+        "environment_fit": 4,
+        "proof_strength": 4,
+        "evidence_quote": "What began as a single proof of concept has grown into daily photogrammetry and dust monitoring missions , fully automated and remotely managed from office control rooms.",
+        "summary": "Webinar detailing daily autonomous inspection and monitoring missions at a Peruvian mine."
+      },
+      "rubric_quote_verified": true,
+      "components": {
+        "rubric": 0.9,
+        "referral": 1.0,
+        "region": 0.6,
+        "industry": 0.615,
+        "section": 0.85
+      },
+      "final_score": 84.9
+    },
+    {
+      "url": "https://flytbase.com/case-studies/sqm-678-km2-mine-autonomous-inspection-adentu-and-flytbase",
+      "section": "case-studies",
+      "title": "How SQM Turned a 678 km² Mine into an Autonomous Inspection Zone | FlytBase | FlytBase",
+      "source_id": "S21",
+      "discovered_via": [
+        "sitemap",
+        "search: site:flytbase.com Mining Autonomous inspection",
+        "search: site:flytbase.com Lithium Extraction case study"
+      ],
+      "slug_score": 5.0,
+      "referral_mentions": 1,
+      "referral_entities_found": [
+        "Anglo American"
+      ],
+      "industry_share": 1.0,
+      "region_hit": 1.0,
+      "section_weight": 1.0,
+      "rubric": {
+        "source_id": "S21",
+        "industry_fit": 5,
+        "use_case_fit": 5,
+        "environment_fit": 5,
+        "proof_strength": 5,
+        "evidence_quote": "SQM, a global leader in lithium, iodine, and nitrate production, partnered with Adentu and FlytBase to bring autonomy from concept to daily routine across its 678 km² mining operation in northern Chile.",
+        "summary": "Direct match: lithium mining in Chile using autonomous drones for daily inspections across a massive site."
+      },
+      "rubric_quote_verified": true,
+      "components": {
+        "rubric": 1.0,
+        "referral": 0.333,
+        "region": 1.0,
+        "industry": 1.0,
+        "section": 1.0
+      },
+      "final_score": 83.3
+    }
+  ],
+  "explanation": {
+    "why_strongest": "The Anglo American case study is the top-ranked proof because it represents a direct referral from the lead's own network and mirrors the exact operational environment of a massive, remote South American mine. It specifically highlights the elimination of truck-based travel for surveys and the use of 'drone-in-a-box' technology to handle challenging terrain, which directly addresses the logistical pain points of the Atacama Desert.",
+    "how_to_use_in_sales": "Open the conversation by mentioning the Anglo American referral to establish immediate trust. Use the '0% travel time' and 'daily survey images' metrics from the case study to show how we solve the 'distance problem' in the Northern Operations Division. Emphasize that we have already solved the 'complex geography' and communication issues in Peru, making us the de-facto choice for their similar Chilean operations.",
+    "gaps_vs_lead": "While the Anglo American study is the strongest social proof, it is technically a 'near-miss' on geography (Peru vs. Chile). Interestingly, the #3 ranked content is actually a direct case study of the lead's own company (SQM) in Chile. You should use the Anglo American study to validate the referral, but pivot quickly to the SQM-specific case study (#3) to show we are already successfully operating on their exact 678 km² site."
+  }
+}

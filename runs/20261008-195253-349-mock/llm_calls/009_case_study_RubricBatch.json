@@ -1,0 +1,36 @@
+{
+  "schema": "RubricBatch",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: score how well each piece of the vendor's own content would work as proof for THIS lead.\nScore 0-5 each: industry_fit, use_case_fit, environment_fit (site type, scale, climate, remoteness, 24/7),\nproof_strength (named customer, concrete deployment detail, measurable outcomes). Return one score per source_id.\nGrounding rules (strict):\n- Use ONLY the text provided inside <sources> or <email>. Do not use prior knowledge for facts.\n- Every evidence_quote must be copied character-for-character from the cited text (15-60 words,\n  one contiguous span, no paraphrase, no ellipsis). A program will check it; non-matching claims are discarded.\n- If the provided text does not support something, leave it out or mark it unknown. Never guess names,\n  numbers, dates or titles.\n",
+  "user": "<lead>\nIndustry: [mock industry] / [mock sub_industry]\nUse case: [mock use_case]\nSites: 3 x [mock asset_or_site_types], [mock asset_or_site_types] in [mock site_locations], [mock site_locations]\nConditions: [mock operating_conditions], [mock operating_conditions]\nPains: [mock stated_pains]; [mock stated_pains]\n</lead>\n<sources>\n<source id=\"S16\" section=\"case-studies\" url=\"https://flytbase.com/case-studies/mining-site-inspection\" title=\"Page https://flytbase.com/case-studies/mining-site-inspection\">\nPage https://flytbase.com/case-studies/mining-site-inspection\nPartners\nMock page text about mining operations, autonomous drone docks and inspection in Chile.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nMock Partner One Chile Gold System Integrator\n</source>\n<source id=\"S17\" section=\"blog\" url=\"https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine\" title=\"Page https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine\">\nPage https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine\nPartners\nMock page text about mining operations, autonomous drone docks and inspection in Chile.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nMock Partner One Chile Gold System Integrator\n</source>\n</sources>",
+  "response": {
+    "scores": [
+      {
+        "source_id": "S1",
+        "industry_fit": 3,
+        "use_case_fit": 3,
+        "environment_fit": 3,
+        "proof_strength": 3,
+        "evidence_quote": "[mock evidence_quote]",
+        "summary": "[mock summary]"
+      },
+      {
+        "source_id": "S1",
+        "industry_fit": 3,
+        "use_case_fit": 3,
+        "environment_fit": 3,
+        "proof_strength": 3,
+        "evidence_quote": "[mock evidence_quote]",
+        "summary": "[mock summary]"
+      }
+    ]
+  },
+  "valid": true
+}

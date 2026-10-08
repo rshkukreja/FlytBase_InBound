@@ -1,0 +1,65 @@
+{
+  "schema": "LeadProfile",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: turn a raw inbound contact-form submission into a structured lead profile.\nExtract only what the email states or directly implies. Company naming variants and the region/market list\nmay use general knowledge (they are used only as search keys, never as facts in the output).\nToday's date is 2026-10-08.",
+  "user": "<email>\nFrom: Rodrigo Castillo (r.castillo@sqm.cl)\nTitle: Head of Operations, Northern Operations Division\nCompany: Sociedad Quimica y Minera de Chile (SQM), Chile\nSubject: Autonomous inspection for our Atacama lithium sites\nContext: Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous. Referred by Anglo American. Internal budget conversation scheduled for Q3.\n</email>\nSender email domain: sqm.cl",
+  "response": {
+    "company_legal_name": "[mock company_legal_name]",
+    "company_short_name": "[mock company_short_name]",
+    "company_name_variants": [
+      "[mock company_name_variants]",
+      "[mock company_name_variants]"
+    ],
+    "hq_country": "[mock hq_country]",
+    "region": "[mock region]",
+    "region_markets": [
+      "[mock region_markets]",
+      "[mock region_markets]"
+    ],
+    "industry": "[mock industry]",
+    "sub_industry": "[mock sub_industry]",
+    "use_case": "[mock use_case]",
+    "asset_or_site_types": [
+      "[mock asset_or_site_types]",
+      "[mock asset_or_site_types]"
+    ],
+    "site_count": 3,
+    "site_locations": [
+      "[mock site_locations]",
+      "[mock site_locations]"
+    ],
+    "operating_conditions": [
+      "[mock operating_conditions]",
+      "[mock operating_conditions]"
+    ],
+    "stated_pains": [
+      "[mock stated_pains]",
+      "[mock stated_pains]"
+    ],
+    "referral_entities": [
+      "[mock referral_entities]",
+      "[mock referral_entities]"
+    ],
+    "timeline_signals": [
+      "[mock timeline_signals]",
+      "[mock timeline_signals]"
+    ],
+    "budget_signals": [
+      "[mock budget_signals]",
+      "[mock budget_signals]"
+    ],
+    "seniority": "C-level",
+    "matching_keywords": [
+      "[mock matching_keywords]",
+      "[mock matching_keywords]"
+    ]
+  },
+  "valid": true
+}

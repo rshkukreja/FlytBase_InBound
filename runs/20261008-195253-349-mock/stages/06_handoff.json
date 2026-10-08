@@ -1,0 +1,47 @@
+{
+  "draft": {
+    "who_he_is": "[mock who_he_is]",
+    "what_he_cares_about": [
+      "[mock what_he_cares_about]",
+      "[mock what_he_cares_about]"
+    ],
+    "others_involved": [
+      {
+        "name_or_role": "[mock name_or_role]",
+        "why_involved": "[mock why_involved]",
+        "basis": "inferred_from_role",
+        "finding_ids": []
+      },
+      {
+        "name_or_role": "[mock name_or_role]",
+        "why_involved": "[mock why_involved]",
+        "basis": "inferred_from_role",
+        "finding_ids": []
+      }
+    ],
+    "top_findings": [],
+    "next_step": {
+      "action": "[mock action]",
+      "owner": "[mock owner]",
+      "timing": "[mock timing]",
+      "rationale": "[mock rationale]",
+      "agenda": [
+        "[mock agenda]",
+        "[mock agenda]"
+      ]
+    },
+    "first_call_questions": [
+      "[mock first_call_questions]",
+      "[mock first_call_questions]"
+    ],
+    "watch_outs": [
+      "[mock watch_outs]",
+      "[mock watch_outs]"
+    ]
+  },
+  "top_findings_resolved": [],
+  "issues": [
+    "handoff cited finding ids that do not exist; removed",
+    "only 0 verified top findings available"
+  ]
+}

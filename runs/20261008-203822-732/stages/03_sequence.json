@@ -1,0 +1,131 @@
+{
+  "draft": {
+    "strategy": "The sequence leverages the Anglo American referral and SQM's specific lithium expansion goals (Novandino Litio) to position FlytBase as the standard for autonomous oversight. It systematically addresses MEDDPICC gaps by moving from high-level operational impact to technical and procurement specifics, while clarifying the Q3 budget timeline.",
+    "tone_notes": "Peer-to-peer, professional, and data-driven. Avoids hyperbole. Focuses on the logistical reality of the Atacama Desert and SQM's specific production targets.",
+    "emails": [
+      {
+        "step": 1,
+        "send_timing": "Day 0 (within 2 business hours)",
+        "trigger": "Inbound request regarding Atacama lithium sites",
+        "goal": "Acknowledge referral, validate role, and address the immediate safety/cost pain.",
+        "unknowns_targeted": [
+          "Champion",
+          "Metrics",
+          "Economic Buyer"
+        ],
+        "finding_ids": [
+          "F08",
+          "F12"
+        ],
+        "materials": [
+          "https://flytbase.com/case-studies/sqm-678-km2-mine-autonomous-inspection-adentu-and-flytbase"
+        ],
+        "subject": "Autonomous inspection for Atacama lithium sites",
+        "body": "Rodrigo,\n\nGood to hear from you. Given your referral from Anglo American, you likely know we specialize in removing personnel from the hazardous conditions you face in the Atacama.\n\nWith SQM managing over 2,700 contractors and the Novandino Litio joint venture aiming for a 70% production increase, manual inspections are a significant bottleneck to maintaining your low-cost producer status. We currently support similar lithium operations in Chile, automating daily inspections across 600+ km2 without pilots on-site.\n\nTo ensure we align with your Q3 budget planning (assuming this refers to the 2027 cycle), could you clarify:\n\n1. How many man-hours are currently dedicated to manual inspections across these three sites?\n2. Besides yourself, who else will be involved in the final approval for this capital allocation?\n\nI have attached a case study of our work at a similar Chilean lithium site for your review.\n\nFlytBase Inbound Team",
+        "why_this_step": "Immediate response to an inbound lead using a direct peer referral and specific SQM workforce data to establish credibility."
+      },
+      {
+        "step": 2,
+        "send_timing": "Day 3 if no reply",
+        "trigger": "No response to Email 1",
+        "goal": "Connect autonomous drones to the 'Salar Futuro' project and identify technical criteria.",
+        "unknowns_targeted": [
+          "Decision Criteria",
+          "Identify Pain"
+        ],
+        "finding_ids": [
+          "F10",
+          "F26"
+        ],
+        "materials": [
+          "https://flytbase.com/webinars/anglo-americans-docked-drones-transforming-mining-operations"
+        ],
+        "subject": "Salar Futuro: Reducing operational slowdowns",
+        "body": "Rodrigo,\n\nFollowing up on my previous note. As SQM advances the US$3 billion Salar Futuro project, the risk of operational slowdowns due to safety incidents becomes a critical factor.\n\nOur platform is designed for the high-UV and dust conditions of the Atacama, providing real-time plant-condition monitoring without the delays of contracted crews. This is the same approach Anglo American uses for daily autonomous monitoring in their Peruvian operations.\n\nRegarding your technical requirements:\n\n1. What specific environmental certifications or sensor payloads (e.g., thermal for leaching piles) are required for hardware at your sites?\n2. Are you evaluating other autonomous platforms, or comparing this against your current manual contractor model?\n\nFlytBase Inbound Team",
+        "why_this_step": "Broadens the value proposition to include the Salar Futuro project and starts probing for technical decision criteria."
+      },
+      {
+        "step": 3,
+        "send_timing": "Day 7 if no reply",
+        "trigger": "No response to Email 2",
+        "goal": "Address the broader infrastructure (Iodine/Pipelines) and the decision process.",
+        "unknowns_targeted": [
+          "Decision Process",
+          "Competition"
+        ],
+        "finding_ids": [
+          "F15",
+          "F31"
+        ],
+        "materials": [
+          "https://flytbase.com/case-studies/anglo-american-autonomous-mining-drones-peru-case-study"
+        ],
+        "subject": "Linear infrastructure and pipeline monitoring",
+        "body": "Rodrigo,\n\nBeyond lithium extraction, we noticed SQM's focus on the seawater pipeline (TEA project) and leaching pile optimization in the Iodine-Plant Nutrition Division. Our software excels at monitoring this type of linear infrastructure autonomously over long distances.\n\nTo help us prepare the right documentation for your Q3 budget conversation:\n\n1. What are the subsequent steps to move from budget approval to a technical validation or POC?\n2. How can we best support your internal presentation to ensure this aligns with the Safety, Health and Environment Committee's mandates?\n\nFlytBase Inbound Team",
+        "why_this_step": "Expands the use case to other SQM divisions to increase internal footprint and asks about the internal champion's needs."
+      },
+      {
+        "step": 4,
+        "send_timing": "Day 12 if no reply",
+        "trigger": "No response to Email 3",
+        "goal": "Final attempt to qualify the paper process and procurement path.",
+        "unknowns_targeted": [
+          "Paper Process",
+          "Decision Process"
+        ],
+        "finding_ids": [
+          "F09",
+          "F11"
+        ],
+        "materials": [],
+        "subject": "Procurement path for SQM autonomous tech",
+        "body": "Rodrigo,\n\nI am reaching out one last time before closing this inquiry. With SQM's US$300 million annual sustaining capital expenditure plan, we want to ensure FlytBase is positioned correctly within your procurement framework.\n\nDoes SQM have a preferred vendor list for autonomous technology, or will this require a new vendor onboarding process for international software providers?\n\nIf the timing for the 24/7 Atacama sites has shifted, please let me know so I can update our records.\n\nFlytBase Inbound Team",
+        "why_this_step": "Final qualification attempt focusing on the 'Paper Process' to understand how SQM actually buys new technology."
+      }
+    ],
+    "reply_branches": [
+      {
+        "if_reply": "Confirms Q3 budget is for 2027 and asks for a proposal.",
+        "next_move": "Schedule a discovery call to define specific KPIs (Metrics) and technical specs (Decision Criteria) before drafting the proposal."
+      },
+      {
+        "if_reply": "States they are looking at other 'drone-in-a-box' vendors.",
+        "next_move": "Send a technical comparison sheet focusing on FlytBase's hardware-agnostic platform and integration capabilities with existing mining ERPs."
+      },
+      {
+        "if_reply": "Indicates that the CFO/VP must approve the spend.",
+        "next_move": "Request an intro or offer to provide an executive summary focused on ROI and risk mitigation (F26) for the Economic Buyer."
+      },
+      {
+        "if_reply": "Asks about local support in Chile.",
+        "next_move": "Introduce the local partner (e.g., Dronestore Chile) to handle hardware maintenance and on-site deployment."
+      }
+    ]
+  },
+  "coverage": {
+    "Metrics": [
+      1
+    ],
+    "Economic Buyer": [
+      1
+    ],
+    "Decision Criteria": [
+      2
+    ],
+    "Decision Process": [
+      3,
+      4
+    ],
+    "Paper Process": [
+      4
+    ],
+    "Champion": [
+      1
+    ],
+    "Competition": [
+      3
+    ]
+  },
+  "issues": [],
+  "revisions": 0
+}

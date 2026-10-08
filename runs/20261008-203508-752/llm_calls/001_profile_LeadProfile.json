@@ -1,0 +1,80 @@
+{
+  "schema": "LeadProfile",
+  "provider": "openai",
+  "model": "gemini-3-flash-preview",
+  "attempt": 1,
+  "seconds": 16.32,
+  "usage": {
+    "input_tokens": 1091,
+    "output_tokens": 300
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: turn a raw inbound contact-form submission into a structured lead profile.\nExtract only what the email states or directly implies. Company naming variants and the region/market list\nmay use general knowledge (they are used only as search keys, never as facts in the output).\nToday's date is 2026-10-08.",
+  "user": "<email>\nFrom: Rodrigo Castillo (r.castillo@sqm.cl)\nTitle: Head of Operations, Northern Operations Division\nCompany: Sociedad Quimica y Minera de Chile (SQM), Chile\nSubject: Autonomous inspection for our Atacama lithium sites\nContext: Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous. Referred by Anglo American. Internal budget conversation scheduled for Q3.\n</email>\nSender email domain: sqm.cl",
+  "response": {
+    "company_legal_name": "Sociedad Química y Minera de Chile S.A.",
+    "company_short_name": "SQM",
+    "company_name_variants": [
+      "SQM",
+      "Sociedad Quimica y Minera de Chile",
+      "NYSE: SQM"
+    ],
+    "hq_country": "Chile",
+    "region": "LATAM",
+    "region_markets": [
+      "Chile",
+      "Argentina",
+      "Brazil",
+      "Peru",
+      "Colombia",
+      "Mexico",
+      "LATAM"
+    ],
+    "industry": "Mining",
+    "sub_industry": "Lithium Extraction",
+    "use_case": "Autonomous inspection",
+    "asset_or_site_types": [
+      "lithium extraction sites",
+      "mining sites"
+    ],
+    "site_count": 3,
+    "site_locations": [
+      "Atacama Desert"
+    ],
+    "operating_conditions": [
+      "24/7",
+      "desert",
+      "remote",
+      "hazardous"
+    ],
+    "stated_pains": [
+      "expensive contracted crews",
+      "hazardous conditions for manual crews"
+    ],
+    "referral_entities": [
+      "Anglo American"
+    ],
+    "timeline_signals": [
+      "Internal budget conversation scheduled for Q3"
+    ],
+    "budget_signals": [
+      "Internal budget conversation scheduled for Q3"
+    ],
+    "seniority": "VP/Head",
+    "matching_keywords": [
+      "mining",
+      "lithium",
+      "extraction",
+      "atacama",
+      "desert",
+      "autonomous inspection",
+      "24/7 operations",
+      "remote monitoring",
+      "drone-in-a-box",
+      "chile"
+    ]
+  },
+  "finish_reason": "stop",
+  "format": "json_schema",
+  "raw_text": "{\"company_legal_name\": \"Sociedad Química y Minera de Chile S.A.\", \"company_short_name\": \"SQM\", \"company_name_variants\": [\"SQM\", \"Sociedad Quimica y Minera de Chile\", \"NYSE: SQM\"], \"hq_country\": \"Chile\", \"region\": \"LATAM\", \"region_markets\": [\"Chile\", \"Argentina\", \"Brazil\", \"Peru\", \"Colombia\", \"Mexico\", \"LATAM\"], \"industry\": \"Mining\", \"sub_industry\": \"Lithium Extraction\", \"use_case\": \"Autonomous inspection\", \"asset_or_site_types\": [\"lithium extraction sites\", \"mining sites\"], \"site_count\": 3, \"site_locations\": [\"Atacama Desert\"], \"operating_conditions\": [\"24/7\", \"desert\", \"remote\", \"hazardous\"], \"stated_pains\": [\"expensive contracted crews\", \"hazardous conditions for manual crews\"], \"referral_entities\": [\"Anglo American\"], \"timeline_signals\": [\"Internal budget conversation scheduled for Q3\"], \"budget_signals\": [\"Internal budget conversation scheduled for Q3\"], \"seniority\": \"VP/Head\", \"matching_keywords\": [\"mining\", \"lithium\", \"extraction\", \"atacama\", \"desert\", \"autonomous inspection\", \"24/7 operations\", \"remote monitoring\", \"drone-in-a-box\", \"chile\"]}",
+  "valid": true
+}

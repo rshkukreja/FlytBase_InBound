@@ -1,0 +1,45 @@
+{"t": 1791469373.358, "stage": "profile", "kind": "info", "msg": "parsed: Rodrigo Castillo <r.castillo@sqm.cl> | Head of Operations, Northern Operations Division | Sociedad Quimica y Minera de Chile (SQM), Chile"}
+{"t": 1791469373.362, "stage": "profile", "kind": "llm_call", "file": "001_profile_LeadProfile.json", "schema": "LeadProfile", "seconds": 0.0}
+{"t": 1791469373.362, "stage": "profile", "kind": "info", "msg": "industry=[mock industry] | use_case=[mock use_case] | region=[mock region] | referrals=['[mock referral_entities]', '[mock referral_entities]']"}
+{"t": 1791469373.363, "stage": "profile", "kind": "stage_done", "seconds": 0.0, "status": "ok", "llm_calls": 1, "llm_input_tokens": 0, "llm_output_tokens": 0, "searches": 0, "fetches": 0, "fetch_failures": 0, "cache_hits": 0}
+{"t": 1791469373.367, "stage": "qualification", "kind": "llm_call", "file": "002_qualification_QualificationDraft.json", "schema": "QualificationDraft", "seconds": 0.0}
+{"t": 1791469373.368, "stage": "qualification", "kind": "info", "msg": "fit 0/100, MEDDPICC 1/16, priority P4 - Disqualify / redirect; 1 verification flags"}
+{"t": 1791469373.369, "stage": "qualification", "kind": "stage_done", "seconds": 0.0, "status": "ok", "llm_calls": 1, "llm_input_tokens": 0, "llm_output_tokens": 0, "searches": 0, "fetches": 0, "fetch_failures": 0, "cache_hits": 0}
+{"t": 1791469373.371, "stage": "research", "kind": "warning", "msg": "company not found in SEC EDGAR; relying on web sources only"}
+{"t": 1791469373.372, "stage": "research", "kind": "llm_call", "file": "003_research_QueryPlan.json", "schema": "QueryPlan", "seconds": 0.0}
+{"t": 1791469373.374, "stage": "research", "kind": "info", "msg": "7 search queries planned"}
+{"t": 1791469373.388, "stage": "research", "kind": "info", "msg": "sources in store: 15 (0 fetches failed or blocked)"}
+{"t": 1791469373.393, "stage": "research", "kind": "llm_call", "file": "004_research_FindingsDraft.json", "schema": "FindingsDraft", "seconds": 0.0}
+{"t": 1791469373.395, "stage": "research", "kind": "llm_call", "file": "006_research_FindingsDraft.json", "schema": "FindingsDraft", "seconds": 0.0}
+{"t": 1791469373.395, "stage": "research", "kind": "llm_call", "file": "005_research_FindingsDraft.json", "schema": "FindingsDraft", "seconds": 0.0}
+{"t": 1791469373.395, "stage": "research", "kind": "llm_call", "file": "007_research_FindingsDraft.json", "schema": "FindingsDraft", "seconds": 0.0}
+{"t": 1791469373.403, "stage": "research", "kind": "info", "msg": "contact check: 4 results, 0 pages mention name + company"}
+{"t": 1791469373.405, "stage": "research", "kind": "info", "msg": "verified findings: 0; rejected claims: 8"}
+{"t": 1791469373.406, "stage": "research", "kind": "llm_call", "file": "008_research_PositioningDraft.json", "schema": "PositioningDraft", "seconds": 0.0}
+{"t": 1791469373.406, "stage": "research", "kind": "warning", "msg": "positioning hook cited unknown findings ['[mock finding_ids]', '[mock finding_ids]']; removed those ids"}
+{"t": 1791469373.406, "stage": "research", "kind": "warning", "msg": "positioning hook cited unknown findings ['[mock finding_ids]', '[mock finding_ids]']; removed those ids"}
+{"t": 1791469373.411, "stage": "research", "kind": "stage_done", "seconds": 0.0, "status": "ok", "llm_calls": 6, "llm_input_tokens": 0, "llm_output_tokens": 0, "searches": 10, "fetches": 23, "fetch_failures": 0, "cache_hits": 0}
+{"t": 1791469373.413, "stage": "case_study", "kind": "info", "msg": "sitemaps read: 1, page URLs: 3"}
+{"t": 1791469373.413, "stage": "case_study", "kind": "info", "msg": "content pool: 2 default-language pages (0 site-search hits)"}
+{"t": 1791469373.419, "stage": "case_study", "kind": "info", "msg": "fetched 2 candidate pages; 0 mention a referral entity"}
+{"t": 1791469373.423, "stage": "case_study", "kind": "llm_call", "file": "009_case_study_RubricBatch.json", "schema": "RubricBatch", "seconds": 0.0}
+{"t": 1791469373.424, "stage": "case_study", "kind": "warning", "msg": "no vendor content mentions the referral entity; the referral claim should be confirmed"}
+{"t": 1791469373.427, "stage": "case_study", "kind": "llm_call", "file": "010_case_study_CaseStudyExplanation.json", "schema": "CaseStudyExplanation", "seconds": 0.0}
+{"t": 1791469373.428, "stage": "case_study", "kind": "info", "msg": "primary: https://flytbase.com/case-studies/mining-site-inspection (score 7.9)"}
+{"t": 1791469373.428, "stage": "case_study", "kind": "stage_done", "seconds": 0.0, "status": "ok", "llm_calls": 2, "llm_input_tokens": 0, "llm_output_tokens": 0, "searches": 4, "fetches": 4, "fetch_failures": 0, "cache_hits": 0}
+{"t": 1791469373.429, "stage": "gtm", "kind": "info", "msg": "sitemaps read: 1, page URLs: 3"}
+{"t": 1791469373.432, "stage": "gtm", "kind": "info", "msg": "partner pages found: ['https://flytbase.com/partner']"}
+{"t": 1791469373.435, "stage": "gtm", "kind": "llm_call", "file": "011_gtm_PartnerExtraction.json", "schema": "PartnerExtraction", "seconds": 0.0}
+{"t": 1791469373.436, "stage": "gtm", "kind": "info", "msg": "partners extracted: 0 verified, 2 rejected"}
+{"t": 1791469373.437, "stage": "gtm", "kind": "info", "msg": "motion: Direct AE engagement (complexity high, 5/7 factors)"}
+{"t": 1791469373.439, "stage": "gtm", "kind": "llm_call", "file": "012_gtm_GtmRationale.json", "schema": "GtmRationale", "seconds": 0.0}
+{"t": 1791469373.44, "stage": "gtm", "kind": "stage_done", "seconds": 0.0, "status": "ok", "llm_calls": 2, "llm_input_tokens": 0, "llm_output_tokens": 0, "searches": 2, "fetches": 4, "fetch_failures": 0, "cache_hits": 0}
+{"t": 1791469373.446, "stage": "sequence", "kind": "llm_call", "file": "013_sequence_SequenceDraft.json", "schema": "SequenceDraft", "seconds": 0.0}
+{"t": 1791469373.447, "stage": "sequence", "kind": "info", "msg": "revision 1: 8 issues -> [\"email 3: cites unknown finding ids ['[mock finding_ids]', '[mock finding_ids]']\", 'email 3: uses no verified research finding', 'email 3: contains a placeholder']"}
+{"t": 1791469373.448, "stage": "sequence", "kind": "llm_call", "file": "014_sequence_SequenceDraft.json", "schema": "SequenceDraft", "seconds": 0.0}
+{"t": 1791469373.448, "stage": "sequence", "kind": "info", "msg": "revision 2: 8 issues -> [\"email 3: cites unknown finding ids ['[mock finding_ids]', '[mock finding_ids]']\", 'email 3: uses no verified research finding', 'email 3: contains a placeholder']"}
+{"t": 1791469373.453, "stage": "sequence", "kind": "llm_call", "file": "015_sequence_SequenceDraft.json", "schema": "SequenceDraft", "seconds": 0.0}
+{"t": 1791469373.454, "stage": "sequence", "kind": "info", "msg": "sequence: 2 emails, 8 open issues after 2 revisions"}
+{"t": 1791469373.455, "stage": "sequence", "kind": "stage_done", "seconds": 0.0, "status": "ok", "llm_calls": 3, "llm_input_tokens": 0, "llm_output_tokens": 0, "searches": 0, "fetches": 0, "fetch_failures": 0, "cache_hits": 0}
+{"t": 1791469373.459, "stage": "handoff", "kind": "llm_call", "file": "016_handoff_HandoffDraft.json", "schema": "HandoffDraft", "seconds": 0.0}
+{"t": 1791469373.46, "stage": "handoff", "kind": "stage_done", "seconds": 0.0, "status": "ok", "llm_calls": 1, "llm_input_tokens": 0, "llm_output_tokens": 0, "searches": 0, "fetches": 0, "fetch_failures": 0, "cache_hits": 0}

@@ -1,0 +1,208 @@
+{
+  "framework": "MEDDPICC",
+  "framework_rationale": "MEDDPICC is the most effective framework for this lead because it involves a high-value industrial mining operation with complex safety and budgetary requirements. While BANT would likely disqualify the lead due to the unconfirmed budget, MEDDPICC allows us to focus on the high-intensity pain and the strategic referral from Anglo American to build a business case.",
+  "elements": [
+    {
+      "element": "Metrics",
+      "status": "partial",
+      "what_we_know": "The lead identifies that current manual operations are 'expensive' and 'hazardous,' implying that ROI will be measured by cost reduction and safety incident prevention.",
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous.",
+      "what_is_missing": "Specific dollar amounts for current crew contracts and safety KPIs or incident rates that need to be improved.",
+      "discovery_questions": [
+        "What is the current annual expenditure for contracted inspection crews across these three sites?",
+        "How many safety incidents or near-misses have been recorded during manual inspections in the last 12 months?"
+      ]
+    },
+    {
+      "element": "Economic Buyer",
+      "status": "partial",
+      "what_we_know": "Rodrigo Castillo holds a senior operational title (Head of Operations) and is initiating the budget conversation, suggesting significant influence or ownership.",
+      "evidence_quote": "Rodrigo Castillo (r.castillo@sqm.cl) Title: Head of Operations, Northern Operations Division Company: Sociedad Quimica y Minera de Chile (SQM), Chile",
+      "what_is_missing": "Confirmation that Rodrigo has final sign-off authority or if the CFO/Division VP must approve the final expenditure.",
+      "discovery_questions": [
+        "Besides yourself, who are the other stakeholders involved in the final approval of the budget for this autonomous initiative?"
+      ]
+    },
+    {
+      "element": "Decision Criteria",
+      "status": "partial",
+      "what_we_know": "The solution must support large-scale, 24/7 operations in a desert environment and replace manual crews for inspection tasks.",
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous.",
+      "what_is_missing": "Technical requirements regarding data integration, specific sensor needs (thermal vs. RGB), and environmental durability standards for the Atacama climate.",
+      "discovery_questions": [
+        "What specific technical certifications or environmental ratings must the drone hardware meet to operate in the Atacama Desert?"
+      ]
+    },
+    {
+      "element": "Decision Process",
+      "status": "partial",
+      "what_we_know": "An internal budget conversation was scheduled for Q3, indicating a structured financial review process.",
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous. Referred by Anglo American. Internal budget conversation scheduled for Q3.",
+      "what_is_missing": "The outcome of the Q3 conversation and the subsequent steps (e.g., RFP, pilot phase, or technical validation) required before a contract is signed.",
+      "discovery_questions": [
+        "Can you share the outcome of the Q3 budget conversation and the subsequent milestones we need to hit for a full rollout?"
+      ]
+    },
+    {
+      "element": "Paper Process",
+      "status": "unknown",
+      "what_we_know": "",
+      "evidence_quote": "",
+      "what_is_missing": "Legal, procurement, and security review requirements for a multi-site international contract.",
+      "discovery_questions": [
+        "Does SQM typically require a pilot agreement before a master service agreement, and what is your standard procurement lead time?"
+      ]
+    },
+    {
+      "element": "Identify Pain",
+      "status": "confirmed",
+      "what_we_know": "The primary drivers are the high cost of external contractors and the physical danger posed to human crews in the extraction sites.",
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous.",
+      "what_is_missing": "The frequency of inspections and the specific operational bottlenecks caused by relying on manual crews.",
+      "discovery_questions": [
+        "How often are inspections currently delayed or cancelled due to the hazardous conditions or contractor availability?"
+      ]
+    },
+    {
+      "element": "Champion",
+      "status": "partial",
+      "what_we_know": "Rodrigo is a high-level operational lead who reached out directly following a referral, but his willingness to navigate internal politics for FlytBase is not yet proven.",
+      "evidence_quote": "Rodrigo Castillo (r.castillo@sqm.cl) Title: Head of Operations, Northern Operations Division Company: Sociedad Quimica y Minera de Chile (SQM), Chile",
+      "what_is_missing": "Evidence that Rodrigo is actively advocating for FlytBase specifically over other autonomous solutions.",
+      "discovery_questions": [
+        "What was the most compelling aspect of the Anglo American implementation that led you to reach out to us?"
+      ]
+    },
+    {
+      "element": "Competition",
+      "status": "unknown",
+      "what_we_know": "",
+      "evidence_quote": "",
+      "what_is_missing": "Whether SQM is evaluating other drone-in-a-box providers or considering an internal drone program.",
+      "discovery_questions": [
+        "Are you currently evaluating other autonomous platforms, or are you looking to replicate the specific stack used by Anglo American?"
+      ]
+    }
+  ],
+  "verification_flags": [],
+  "fit": [
+    {
+      "criterion_id": "target_industry",
+      "label": "Target industry",
+      "weight": 20,
+      "assessment": "met",
+      "points": 20.0,
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous.",
+      "quote_verified": true,
+      "note": "Mining and lithium extraction are core target industries for FlytBase."
+    },
+    {
+      "criterion_id": "large_sites",
+      "label": "Large-scale sites",
+      "weight": 15,
+      "assessment": "met",
+      "points": 15.0,
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous.",
+      "quote_verified": true,
+      "note": "The lead explicitly mentions large-scale sites."
+    },
+    {
+      "criterion_id": "continuous_ops",
+      "label": "Continuous operations",
+      "weight": 10,
+      "assessment": "met",
+      "points": 10.0,
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous.",
+      "quote_verified": true,
+      "note": "24/7 operations strongly favor autonomous docking stations over manual pilots."
+    },
+    {
+      "criterion_id": "multi_site",
+      "label": "Multi-site rollout potential",
+      "weight": 10,
+      "assessment": "met",
+      "points": 10.0,
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous.",
+      "quote_verified": true,
+      "note": "Three sites are explicitly mentioned in the initial scope."
+    },
+    {
+      "criterion_id": "costly_or_hazardous_manual_work",
+      "label": "Costly or hazardous manual inspection",
+      "weight": 15,
+      "assessment": "met",
+      "points": 15.0,
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous.",
+      "quote_verified": true,
+      "note": "The lead directly cites high costs and hazards as the reason for the inquiry."
+    },
+    {
+      "criterion_id": "warm_referral",
+      "label": "Warm referral",
+      "weight": 10,
+      "assessment": "met",
+      "points": 10.0,
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous. Referred by Anglo American. Internal budget conversation scheduled for Q3.",
+      "quote_verified": true,
+      "note": "Referral from Anglo American, a major mining entity, provides high credibility."
+    },
+    {
+      "criterion_id": "budget_or_timeline_signal",
+      "label": "Budget / timeline signal",
+      "weight": 10,
+      "assessment": "met",
+      "points": 10.0,
+      "evidence_quote": "Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous. Referred by Anglo American. Internal budget conversation scheduled for Q3.",
+      "quote_verified": true,
+      "note": "Mentions a specific budget conversation window (Q3)."
+    },
+    {
+      "criterion_id": "senior_operational_owner",
+      "label": "Senior operational owner",
+      "weight": 10,
+      "assessment": "met",
+      "points": 10.0,
+      "evidence_quote": "Rodrigo Castillo (r.castillo@sqm.cl) Title: Head of Operations, Northern Operations Division Company: Sociedad Quimica y Minera de Chile (SQM), Chile",
+      "quote_verified": true,
+      "note": "The sender is the Head of Operations for the relevant division."
+    }
+  ],
+  "fit_score": 100,
+  "meddpicc_points": 7,
+  "meddpicc_max": 16,
+  "meddpicc_pct": 44,
+  "priority": "P1 - Hot",
+  "priority_meaning": "Strong ICP fit; route to an AE within 24h even though qualification is incomplete.",
+  "priority_reasoning": [
+    "ICP fit 100/100 from 8 of 8 criteria with email evidence.",
+    "MEDDPICC completeness 7/16 (44%): typical for a first inbound touch; discovery must close the gaps listed below.",
+    "Rule applied: fit >= 75 -> P1 - Hot.",
+    "Strongest signals: Target industry, Large-scale sites, Continuous operations, Multi-site rollout potential, Costly or hazardous manual inspection, Warm referral, Budget / timeline signal, Senior operational owner."
+  ],
+  "known": [
+    "Metrics: The lead identifies that current manual operations are 'expensive' and 'hazardous,' implying that ROI will be measured by cost reduction and safety incident prevention.",
+    "Economic Buyer: Rodrigo Castillo holds a senior operational title (Head of Operations) and is initiating the budget conversation, suggesting significant influence or ownership.",
+    "Decision Criteria: The solution must support large-scale, 24/7 operations in a desert environment and replace manual crews for inspection tasks.",
+    "Decision Process: An internal budget conversation was scheduled for Q3, indicating a structured financial review process.",
+    "Identify Pain: The primary drivers are the high cost of external contractors and the physical danger posed to human crews in the extraction sites.",
+    "Champion: Rodrigo is a high-level operational lead who reached out directly following a referral, but his willingness to navigate internal politics for FlytBase is not yet proven."
+  ],
+  "missing": [
+    "Metrics: Specific dollar amounts for current crew contracts and safety KPIs or incident rates that need to be improved.",
+    "Economic Buyer: Confirmation that Rodrigo has final sign-off authority or if the CFO/Division VP must approve the final expenditure.",
+    "Decision Criteria: Technical requirements regarding data integration, specific sensor needs (thermal vs. RGB), and environmental durability standards for the Atacama climate.",
+    "Decision Process: The outcome of the Q3 conversation and the subsequent steps (e.g., RFP, pilot phase, or technical validation) required before a contract is signed.",
+    "Paper Process: Legal, procurement, and security review requirements for a multi-site international contract.",
+    "Champion: Evidence that Rodrigo is actively advocating for FlytBase specifically over other autonomous solutions.",
+    "Competition: Whether SQM is evaluating other drone-in-a-box providers or considering an internal drone program."
+  ],
+  "ambiguities": [
+    "The reference to 'Q3' for a budget conversation is unclear given today's date of 2026-10-08; it may refer to a past event or a different fiscal calendar.",
+    "The specific definition of 'large-scale' needs to be quantified to ensure drone range and dock placement are feasible."
+  ],
+  "risks": [
+    "The budget is not yet approved, only scheduled for discussion.",
+    "The timeline (Q3) appears to be in the past relative to the current date, suggesting a potential delay or misalignment.",
+    "Extreme desert conditions in the Atacama may require specialized hardware that exceeds standard drone-in-a-box specifications."
+  ]
+}

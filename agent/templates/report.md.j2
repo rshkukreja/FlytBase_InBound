@@ -1,0 +1,176 @@
+# Inbound brief: {{ email.sender_name }}, {{ profile.company_legal_name }}
+
+Run `{{ meta.run_id }}` · {{ meta.run_date }} · {{ meta.llm }} · search: {{ meta.search }} · {{ meta.seconds }}s · {{ meta.counters.llm_calls }} LLM calls · {{ r.sources|length }} sources · {{ r.findings|length }} verified findings ({{ r.rejected|length }} rejected){% if meta.mock %} · **MOCK RUN — placeholder output**{% endif %}
+
+
+**Priority {{ q.priority }}** · ICP fit {{ q.fit_score }}/100 · MEDDPICC {{ q.meddpicc_points }}/{{ q.meddpicc_max }} · GTM: {{ gtm.motion }}
+
+## Input
+```
+{{ email.raw }}
+```
+
+## Stage 1 · Qualification ({{ q.framework }})
+**Why {{ q.framework }}:** {{ q.framework_rationale }}
+
+{% for x in q.priority_reasoning %}- {{ x }}
+{% endfor %}
+
+| Element | Status | Known | Missing | Questions |
+|---|---|---|---|---|
+{% for el in q.elements %}| {{ el.element }} | {{ el.status }} | {{ el.what_we_know|replace('|','/') }}{% if el.evidence_quote %} — “{{ el.evidence_quote|replace('|','/') }}”{% endif %} | {{ el.what_is_missing|replace('|','/') }} | {{ el.discovery_questions|join(' / ')|replace('|','/') }} |
+{% endfor %}
+
+| ICP criterion | Weight | Assessment | Points | Evidence |
+|---|---|---|---|---|
+{% for l in q.fit %}| {{ l.label }} | {{ l.weight }} | {{ l.assessment }} | {{ '%g'|format(l.points) }} | {{ l.evidence_quote|replace('|','/') }} |
+{% endfor %}
+
+**Ambiguities:**
+
+{% for x in q.ambiguities %}
+- {{ x }}
+{% endfor %}
+
+**Risks:**
+
+{% for x in q.risks %}
+- {{ x }}
+{% endfor %}
+{% if q.verification_flags %}
+
+**Grounding checks:**
+
+{% for x in q.verification_flags %}
+- {{ x }}
+{% endfor %}{% endif %}
+
+
+## Stage 2 · Account research
+{% if r.company_identifiers.cik %}SEC EDGAR CIK {{ r.company_identifiers.cik }} ({{ r.company_identifiers.label }}){% if r.company_identifiers.annual_report %}; annual report {{ r.company_identifiers.annual_report.form }} filed {{ r.company_identifiers.annual_report.date }}: {{ r.company_identifiers.annual_report.url }}{% endif %}{% endif %}
+
+{% for d, label in dims.items() %}
+### {{ label }}
+{% for f in findings_by_dim[d] %}- **{{ f.id }}** {{ f.claim }}{% if f.date_or_period %} ({{ f.date_or_period }}){% endif %} [{{ f.source_id }}]({{ src[f.source_id].url if src.get(f.source_id) else '' }})
+  > {{ f.evidence_quote }}
+
+  *So what:* {{ f.so_what }}
+{% else %}- _No verified findings._
+{% endfor %}
+{% endfor %}
+**Sender verification:** {{ 'publicly verified' if r.contact.publicly_verified else 'NOT publicly verified' }}. {{ r.contact.summary }}
+
+### Positioning
+{{ r.positioning.thesis }}
+
+{% for vh in r.positioning.value_hooks %}- **{{ vh.hook }}** ({{ vh.finding_ids|join(', ') }}): {{ vh.how_to_say_it }}
+{% endfor %}
+
+**Stakeholders**
+{% for st in r.positioning.likely_stakeholders %}- {{ st.name_or_role }} ({{ st.basis }}{% if st.finding_ids %}; {{ st.finding_ids|join(', ') }}{% endif %}): {{ st.why_involved }}
+{% endfor %}
+{% if r.gaps %}
+**Research gaps**
+{% for x in r.gaps %}- {{ x }}
+{% endfor %}{% endif %}
+
+## Stage 3 · Response sequence
+**Strategy:** {{ seq.draft.strategy }}
+
+**Tone:** {{ seq.draft.tone_notes }}
+{% for em in seq.draft.emails %}
+
+### Email {{ em.step }}: {{ em.subject }}
+*{{ em.send_timing }} · trigger: {{ em.trigger }} · goal: {{ em.goal }} · targets: {{ em.unknowns_targeted|join(', ') }} · research: {{ em.finding_ids|join(', ') }}*
+
+```
+{{ em.body }}
+```
+{% if em.materials %}Materials: {{ em.materials|join(', ') }}
+{% endif %}
+**Why this step:** {{ em.why_this_step }}
+{% endfor %}
+
+**Reply branches**
+{% for b in seq.draft.reply_branches %}- If {{ b.if_reply }} → {{ b.next_move }}
+{% endfor %}
+
+Coverage: {% for el, steps in seq.coverage.items() %}{{ el }} → {{ steps|join(',') or 'NOT COVERED' }}; {% endfor %}
+Revisions: {{ seq.revisions }}. {% if seq.issues %}Open issues: {{ seq.issues|join('; ') }}{% else %}All checks passed.{% endif %}
+
+
+## Stage 4 · Case study
+Referral entities from email: {{ cs.referral_entities|join(', ') or 'none' }}. Vendor pages mentioning them: {{ cs.referral_linked_urls|join(', ') or 'none' }}
+
+{% if cs.primary %}**Recommended:** {{ cs.primary.title }} — {{ cs.primary.url }} (score {{ cs.primary.final_score }})
+{% if cs.explanation %}
+- Why: {{ cs.explanation.why_strongest }}
+- How to use: {{ cs.explanation.how_to_use_in_sales }}
+- Gaps: {{ cs.explanation.gaps_vs_lead }}
+{% endif %}{% endif %}
+
+| # | Content | Score | Rubric i/u/e/p | Referral | Region | Keywords |
+|---|---|---|---|---|---|---|
+{% for c in cs.ranked %}| {{ loop.index }} | [{{ (c.title or c.url)|replace('|','/') }}]({{ c.url }}) | {{ c.final_score }} | {% if c.rubric %}{{ c.rubric.industry_fit }}/{{ c.rubric.use_case_fit }}/{{ c.rubric.environment_fit }}/{{ c.rubric.proof_strength }}{% endif %} | {{ c.referral_mentions }} | {{ c.region_hit }} | {{ c.industry_share }} |
+{% endfor %}
+
+
+## Stage 5 · Go-to-market
+**{{ gtm.motion }}** · partner type: {{ gtm.recommended_partner_type }} · complexity: {{ gtm.complexity_level }}
+
+{% for t in gtm.decision_trace %}{{ loop.index }}. {{ t }}
+{% endfor %}
+{% if gtm.shortlist %}
+| Partner | Country | Tier | Type | Points | Why |
+|---|---|---|---|---|---|
+{% for p in gtm.shortlist %}| {{ p.name }} | {{ p.country }} | {{ p.tier }} | {{ p.types|join(', ') }} | {{ '%g'|format(p.points) }} | {{ p.reasons|join('; ') }} |
+{% endfor %}{% endif %}
+{% if gtm.rationale %}
+{{ gtm.rationale.rationale }}
+
+- AE owns: {{ gtm.rationale.ae_role }}
+- Partner owns: {{ gtm.rationale.partner_role }}
+{% endif %}
+
+## Stage 6 · AE handoff
+**Buyer context:** {{ h.draft.who_he_is }}
+
+Cares about:
+
+{% for x in h.draft.what_he_cares_about %}
+- {{ x }}
+{% endfor %}
+
+Others involved:
+
+{% for st in h.draft.others_involved %}
+- {{ st.name_or_role }} ({{ st.basis }}): {{ st.why_involved }}
+{% endfor %}
+
+**Qualification:** {{ q.framework }} {{ q.meddpicc_points }}/{{ q.meddpicc_max }}, ICP fit {{ q.fit_score }}/100, {{ q.priority }}
+
+**Top findings**
+{% for t in h.draft.top_findings %}{% set f = finding.get(t.finding_id) %}{{ loop.index }}. {{ f.claim }} ({{ t.finding_id }}, {{ f.source_id }}) — {{ t.why_ae_should_care }}
+{% endfor %}
+
+**Case study:** {{ cs.primary.url if cs.primary else 'none' }}
+
+**Next step:** {{ h.draft.next_step.action }} — {{ h.draft.next_step.owner }}, {{ h.draft.next_step.timing }}. {{ h.draft.next_step.rationale }}
+
+Agenda:
+
+{% for a in h.draft.next_step.agenda %}
+{{ loop.index }}. {{ a }}
+{% endfor %}
+
+
+First-call questions:
+
+{% for x in h.draft.first_call_questions %}
+- {{ x }}
+{% endfor %}
+
+
+## Sources
+{% for s in r.sources %}- {{ s.id }} [{{ s.kind }}] {{ s.title|replace('[','(')|replace(']',')') }} — {{ s.url }}
+{% endfor %}

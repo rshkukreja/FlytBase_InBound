@@ -1,0 +1,66 @@
+{
+  "company_legal_name": "Sociedad Química y Minera de Chile S.A.",
+  "company_short_name": "SQM",
+  "company_name_variants": [
+    "SQM",
+    "Sociedad Quimica y Minera de Chile",
+    "Chemical and Mining Company of Chile",
+    "NYSE: SQM"
+  ],
+  "hq_country": "Chile",
+  "region": "LATAM",
+  "region_markets": [
+    "Chile",
+    "LATAM",
+    "Argentina",
+    "Brazil",
+    "Peru",
+    "Colombia",
+    "Mexico"
+  ],
+  "industry": "Mining",
+  "sub_industry": "Lithium Extraction",
+  "use_case": "Autonomous inspection",
+  "asset_or_site_types": [
+    "lithium extraction sites",
+    "mining sites"
+  ],
+  "site_count": 3,
+  "site_locations": [
+    "Atacama Desert, Chile"
+  ],
+  "operating_conditions": [
+    "24/7",
+    "desert",
+    "hazardous",
+    "large-scale"
+  ],
+  "stated_pains": [
+    "expensive contracted crews",
+    "hazardous conditions for crews"
+  ],
+  "referral_entities": [
+    "Anglo American"
+  ],
+  "timeline_signals": [
+    "Internal budget conversation scheduled for Q3"
+  ],
+  "budget_signals": [
+    "Internal budget conversation scheduled for Q3"
+  ],
+  "seniority": "VP/Head",
+  "matching_keywords": [
+    "mining",
+    "lithium",
+    "extraction",
+    "inspection",
+    "desert",
+    "autonomous",
+    "drone-in-a-box",
+    "chile",
+    "hazardous",
+    "24/7",
+    "remote",
+    "operations"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "QualificationDraft",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: qualify the inbound lead with MEDDPICC (Metrics, Economic Buyer, Decision Criteria, Decision Process,\nPaper Process, Identify Pain, Champion, Competition) and judge it against the vendor's ICP criteria.\nUse only the email. status = confirmed (explicitly stated), partial (implied or incomplete), unknown (absent).\nReturn exactly one assessment per MEDDPICC element and exactly one fit signal per ICP criterion id.\nBe skeptical: a referral is not a champion until someone has agreed to sell internally; a 'budget conversation'\nis not an approved budget. Flag ambiguities, including any time reference that is unclear relative to today\n(2026-10-08) and anything the sender asserts that should be checked against public information.\nGrounding rules (strict):\n- Use ONLY the text provided inside <sources> or <email>. Do not use prior knowledge for facts.\n- Every evidence_quote must be copied character-for-character from the cited text (15-60 words,\n  one contiguous span, no paraphrase, no ellipsis). A program will check it; non-matching claims are discarded.\n- If the provided text does not support something, leave it out or mark it unknown. Never guess names,\n  numbers, dates or titles.\n",
+  "user": "<email>\nFrom: Rodrigo Castillo (r.castillo@sqm.cl)\nTitle: Head of Operations, Northern Operations Division\nCompany: Sociedad Quimica y Minera de Chile (SQM), Chile\nSubject: Autonomous inspection for our Atacama lithium sites\nContext: Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous. Referred by Anglo American. Internal budget conversation scheduled for Q3.\n</email>\n\n<lead_profile>\n{\n \"company_legal_name\": \"[mock company_legal_name]\",\n \"company_short_name\": \"[mock company_short_name]\",\n \"company_name_variants\": [\n  \"[mock company_name_variants]\",\n  \"[mock company_name_variants]\"\n ],\n \"hq_country\": \"[mock hq_country]\",\n \"region\": \"[mock region]\",\n \"region_markets\": [\n  \"[mock region_markets]\",\n  \"[mock region_markets]\"\n ],\n \"industry\": \"[mock industry]\",\n \"sub_industry\": \"[mock sub_industry]\",\n \"use_case\": \"[mock use_case]\",\n \"asset_or_site_types\": [\n  \"[mock asset_or_site_types]\",\n  \"[mock asset_or_site_types]\"\n ],\n \"site_count\": 3,\n \"site_locations\": [\n  \"[mock site_locations]\",\n  \"[mock site_locations]\"\n ],\n \"operating_conditions\": [\n  \"[mock operating_conditions]\",\n  \"[mock operating_conditions]\"\n ],\n \"stated_pains\": [\n  \"[mock stated_pains]\",\n  \"[mock stated_pains]\"\n ],\n \"referral_entities\": [\n  \"[mock referral_entities]\",\n  \"[mock referral_entities]\"\n ],\n \"timeline_signals\": [\n  \"[mock timeline_signals]\",\n  \"[mock timeline_signals]\"\n ],\n \"budget_signals\": [\n  \"[mock budget_signals]\",\n  \"[mock budget_signals]\"\n ],\n \"seniority\": \"C-level\",\n \"matching_keywords\": [\n  \"[mock matching_keywords]\",\n  \"[mock matching_keywords]\"\n ]\n}\n</lead_profile>\n\n<icp_criteria>\n[\n {\n  \"id\": \"target_industry\",\n  \"label\": \"Target industry\",\n  \"description\": \"Heavy industry with large physical sites: mining, oil & gas, utilities/energy, ports & logistics, rail, chemicals, manufacturing, public safety, security of large perimeters.\"\n },\n {\n  \"id\": \"large_sites\",\n  \"label\": \"Large-scale sites\",\n  \"description\": \"Sites large or spread out enough that manual inspection is slow (mines, plants, pipelines, yards).\"\n },\n {\n  \"id\": \"continuous_ops\",\n  \"label\": \"Continuous operations\",\n  \"description\": \"Operations run continuously (24/7 or shift-based), which favours docked, autonomous drones over piloted flights.\"\n },\n {\n  \"id\": \"multi_site\",\n  \"label\": \"Multi-site rollout potential\",\n  \"description\": \"More than one site is in scope or implied.\"\n },\n {\n  \"id\": \"costly_or_hazardous_manual_work\",\n  \"label\": \"Costly or hazardous manual inspection\",\n  \"description\": \"The status quo (crews, contractors, manual rounds) is expensive, slow or dangerous.\"\n },\n {\n  \"id\": \"warm_referral\",\n  \"label\": \"Warm referral\",\n  \"description\": \"Referred by an existing customer or partner.\"\n },\n {\n  \"id\": \"budget_or_timeline_signal\",\n  \"label\": \"Budget / timeline signal\",\n  \"description\": \"A budget cycle, funding event or decision date is mentioned.\"\n },\n {\n  \"id\": \"senior_operational_owner\",\n  \"label\": \"Senior operational owner\",\n  \"description\": \"Sender is a senior leader who owns the operational problem (Head/VP/Director of Operations, Asset Integrity, HSE, Security).\"\n }\n]\n</icp_criteria>\n\nMEDDPICC elements: Metrics, Economic Buyer, Decision Criteria, Decision Process, Paper Process, Identify Pain, Champion, Competition",
+  "response": {
+    "framework_rationale": "[mock framework_rationale]",
+    "elements": [
+      {
+        "element": "Metrics",
+        "status": "confirmed",
+        "what_we_know": "[mock what_we_know]",
+        "evidence_quote": "[mock evidence_quote]",
+        "what_is_missing": "[mock what_is_missing]",
+        "discovery_questions": [
+          "[mock discovery_questions]",
+          "[mock discovery_questions]"
+        ]
+      },
+      {
+        "element": "Metrics",
+        "status": "confirmed",
+        "what_we_know": "[mock what_we_know]",
+        "evidence_quote": "[mock evidence_quote]",
+        "what_is_missing": "[mock what_is_missing]",
+        "discovery_questions": [
+          "[mock discovery_questions]",
+          "[mock discovery_questions]"
+        ]
+      }
+    ],
+    "fit_signals": [
+      {
+        "criterion_id": "S1",
+        "assessment": "met",
+        "evidence_quote": "[mock evidence_quote]",
+        "note": "[mock note]"
+      },
+      {
+        "criterion_id": "S1",
+        "assessment": "met",
+        "evidence_quote": "[mock evidence_quote]",
+        "note": "[mock note]"
+      }
+    ],
+    "ambiguities": [
+      "[mock ambiguities]",
+      "[mock ambiguities]"
+    ],
+    "risks": [
+      "[mock risks]",
+      "[mock risks]"
+    ]
+  },
+  "valid": true
+}

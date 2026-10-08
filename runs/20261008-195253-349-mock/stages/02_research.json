@@ -1,0 +1,280 @@
+{
+  "company_identifiers": {
+    "names_tried": [
+      "[mock company_legal_name]",
+      "[mock company_short_name]",
+      "[mock company_name_variants]",
+      "Sociedad Quimica y Minera de Chile (SQM), Chile"
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "url": "inbound://contact-form",
+      "title": "Inbound email from Rodrigo Castillo",
+      "kind": "input",
+      "tags": [
+        "email"
+      ]
+    },
+    {
+      "id": "S2",
+      "url": "https://example.org/mock-query/0",
+      "title": "Page https://example.org/mock-query/0",
+      "kind": "web",
+      "tags": [
+        "org_structure"
+      ]
+    },
+    {
+      "id": "S3",
+      "url": "https://example.org/mock-query/1",
+      "title": "Page https://example.org/mock-query/1",
+      "kind": "web",
+      "tags": [
+        "org_structure"
+      ]
+    },
+    {
+      "id": "S4",
+      "url": "https://example.org/mock-company-short-name-capital-expendit/0",
+      "title": "Page https://example.org/mock-company-short-name-capital-expendit/0",
+      "kind": "web",
+      "tags": [
+        "budget_signals"
+      ]
+    },
+    {
+      "id": "S5",
+      "url": "https://example.org/mock-company-short-name-capital-expendit/1",
+      "title": "Page https://example.org/mock-company-short-name-capital-expendit/1",
+      "kind": "web",
+      "tags": [
+        "budget_signals"
+      ]
+    },
+    {
+      "id": "S6",
+      "url": "https://example.org/mock-company-short-name-investment-plan-/0",
+      "title": "Page https://example.org/mock-company-short-name-investment-plan-/0",
+      "kind": "web",
+      "tags": [
+        "budget_signals"
+      ]
+    },
+    {
+      "id": "S7",
+      "url": "https://example.org/mock-company-short-name-investment-plan-/1",
+      "title": "Page https://example.org/mock-company-short-name-investment-plan-/1",
+      "kind": "web",
+      "tags": [
+        "budget_signals"
+      ]
+    },
+    {
+      "id": "S8",
+      "url": "https://example.org/mock-company-short-name-news-2026/0",
+      "title": "Page https://example.org/mock-company-short-name-news-2026/0",
+      "kind": "web",
+      "tags": [
+        "news"
+      ]
+    },
+    {
+      "id": "S9",
+      "url": "https://example.org/mock-company-short-name-news-2026/1",
+      "title": "Page https://example.org/mock-company-short-name-news-2026/1",
+      "kind": "web",
+      "tags": [
+        "news"
+      ]
+    },
+    {
+      "id": "S10",
+      "url": "https://example.org/mock-company-short-name-press-release-mo/0",
+      "title": "Page https://example.org/mock-company-short-name-press-release-mo/0",
+      "kind": "web",
+      "tags": [
+        "news"
+      ]
+    },
+    {
+      "id": "S11",
+      "url": "https://example.org/mock-company-short-name-press-release-mo/1",
+      "title": "Page https://example.org/mock-company-short-name-press-release-mo/1",
+      "kind": "web",
+      "tags": [
+        "news"
+      ]
+    },
+    {
+      "id": "S12",
+      "url": "https://example.org/mock-company-short-name-annual-report-le/0",
+      "title": "Page https://example.org/mock-company-short-name-annual-report-le/0",
+      "kind": "web",
+      "tags": [
+        "stakeholder_letters"
+      ]
+    },
+    {
+      "id": "S13",
+      "url": "https://example.org/mock-company-short-name-annual-report-le/1",
+      "title": "Page https://example.org/mock-company-short-name-annual-report-le/1",
+      "kind": "web",
+      "tags": [
+        "stakeholder_letters"
+      ]
+    },
+    {
+      "id": "S14",
+      "url": "https://example.org/mock-company-short-name-investor-present/0",
+      "title": "Page https://example.org/mock-company-short-name-investor-present/0",
+      "kind": "web",
+      "tags": [
+        "stakeholder_letters"
+      ]
+    },
+    {
+      "id": "S15",
+      "url": "https://example.org/mock-company-short-name-investor-present/1",
+      "title": "Page https://example.org/mock-company-short-name-investor-present/1",
+      "kind": "web",
+      "tags": [
+        "stakeholder_letters"
+      ]
+    }
+  ],
+  "findings": [],
+  "rejected": [
+    {
+      "stage": "research/org_structure",
+      "claim": "[mock claim]",
+      "source_id": "S1",
+      "reason": "quote not found in source (match 0/100)"
+    },
+    {
+      "stage": "research/org_structure",
+      "claim": "[mock claim]",
+      "source_id": "S1",
+      "reason": "quote not found in source (match 0/100)"
+    },
+    {
+      "stage": "research/budget_signals",
+      "claim": "[mock claim]",
+      "source_id": "S1",
+      "reason": "quote not found in source (match 0/100)"
+    },
+    {
+      "stage": "research/budget_signals",
+      "claim": "[mock claim]",
+      "source_id": "S1",
+      "reason": "quote not found in source (match 0/100)"
+    },
+    {
+      "stage": "research/news",
+      "claim": "[mock claim]",
+      "source_id": "S1",
+      "reason": "quote not found in source (match 0/100)"
+    },
+    {
+      "stage": "research/news",
+      "claim": "[mock claim]",
+      "source_id": "S1",
+      "reason": "quote not found in source (match 0/100)"
+    },
+    {
+      "stage": "research/stakeholder_letters",
+      "claim": "[mock claim]",
+      "source_id": "S1",
+      "reason": "quote not found in source (match 0/100)"
+    },
+    {
+      "stage": "research/stakeholder_letters",
+      "claim": "[mock claim]",
+      "source_id": "S1",
+      "reason": "quote not found in source (match 0/100)"
+    }
+  ],
+  "contact": {
+    "publicly_verified": false,
+    "summary": "No public source found that names Rodrigo Castillo at [mock company_short_name]. Title and division are taken from the contact form only and must be confirmed.",
+    "findings": []
+  },
+  "positioning": {
+    "thesis": "[mock thesis]",
+    "value_hooks": [],
+    "likely_stakeholders": [
+      {
+        "name_or_role": "[mock name_or_role]",
+        "why_involved": "[mock why_involved]",
+        "basis": "inferred_from_role",
+        "finding_ids": []
+      },
+      {
+        "name_or_role": "[mock name_or_role]",
+        "why_involved": "[mock why_involved]",
+        "basis": "inferred_from_role",
+        "finding_ids": []
+      }
+    ],
+    "risks_and_objections": [
+      "[mock risks_and_objections]",
+      "[mock risks_and_objections]"
+    ],
+    "avoid": [
+      "[mock avoid]",
+      "[mock avoid]"
+    ]
+  },
+  "coverage": {
+    "org_structure": 0,
+    "budget_signals": 0,
+    "news": 0,
+    "stakeholder_letters": 0,
+    "contact": 0
+  },
+  "gaps": [
+    "No verified findings for 'org_structure'",
+    "No verified findings for 'budget_signals'",
+    "No verified findings for 'news'",
+    "No verified findings for 'stakeholder_letters'",
+    "Sender's role and reporting line are not publicly verifiable; confirm on first call."
+  ],
+  "queries_run": [
+    {
+      "dimension": "org_structure",
+      "query": "[mock query]",
+      "why": "[mock why]"
+    },
+    {
+      "dimension": "budget_signals",
+      "query": "[mock company_short_name] capital expenditure plan 2026",
+      "why": "coverage fallback"
+    },
+    {
+      "dimension": "budget_signals",
+      "query": "[mock company_short_name] investment plan technology automation",
+      "why": "coverage fallback"
+    },
+    {
+      "dimension": "news",
+      "query": "[mock company_short_name] news 2026",
+      "why": "coverage fallback"
+    },
+    {
+      "dimension": "news",
+      "query": "[mock company_short_name] press release [mock sub_industry] 2026",
+      "why": "coverage fallback"
+    },
+    {
+      "dimension": "stakeholder_letters",
+      "query": "[mock company_short_name] annual report letter from chairman",
+      "why": "coverage fallback"
+    },
+    {
+      "dimension": "stakeholder_letters",
+      "query": "[mock company_short_name] investor presentation 2026",
+      "why": "coverage fallback"
+    }
+  ]
+}

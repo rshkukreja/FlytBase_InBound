@@ -1,0 +1,28 @@
+{
+  "schema": "QueryPlan",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: plan web searches for account research. Today's date is 2026-10-08.\nWrite 3 specific queries per dimension. Prefer primary sources: annual reports, 20-F/10-K, investor\npresentations, earnings releases, sustainability reports, the company's own press room, reputable news.\nInclude the company name in every query. Include the current or previous year where recency matters.",
+  "user": "Company: [mock company_legal_name] ([mock company_short_name]), [mock hq_country]\nLead context: [mock sub_industry]; [mock use_case]; sites: [mock site_locations], [mock site_locations]\nDimensions:\n- org_structure: Organizational structure, business units, operating sites and executives relevant to an operations leader in the lead's division/region; who the lead likely reports to.\n- budget_signals: Capex/opex guidance, investment plans, technology/automation/digital spend, safety and contractor costs from public filings and investor material.\n- news: Recent news, press releases and strategic announcements (last ~18 months).\n- stakeholder_letters: Chairman/CEO letters, investor presentations, sustainability reports and earnings commentary that reveal operating priorities.",
+  "response": {
+    "queries": [
+      {
+        "dimension": "org_structure",
+        "query": "[mock query]",
+        "why": "[mock why]"
+      },
+      {
+        "dimension": "org_structure",
+        "query": "[mock query]",
+        "why": "[mock why]"
+      }
+    ]
+  },
+  "valid": true
+}

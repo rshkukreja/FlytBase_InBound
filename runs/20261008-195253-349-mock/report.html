@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbound Brief · [mock company_short_name]</title>
+<style>
+:root{--bg:#f7f7f4;--card:#fff;--ink:#1b1d21;--muted:#5d636e;--line:#e3e3dd;--accent:#0f5ec9;--ok:#1d7a46;--warn:#a35b00;--bad:#b3261e;--chip:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1a1d21;--ink:#e8e9eb;--muted:#9aa1ab;--line:#2c3036;--accent:#6aa7ff;--ok:#57c48a;--warn:#e5a54b;--bad:#ff7d73;--chip:#22272e}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:28px 16px 80px}
+h1{font-size:28px;margin:0 0 4px;letter-spacing:-.01em}h2{font-size:21px;margin:0 0 12px}h3{font-size:16px;margin:18px 0 8px}
+.sub{color:var(--muted)}a{color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:18px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.chip{background:var(--chip);border-radius:999px;padding:3px 11px;font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.kpi{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.kpi b{display:block;font-size:22px}.kpi span{color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;vertical-align:top;padding:8px 8px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:600;font-size:12.5px;text-transform:uppercase;letter-spacing:.03em}
+.tbl{overflow-x:auto}
+.st{font-weight:600;font-size:12.5px;border-radius:6px;padding:2px 7px;white-space:nowrap}.confirmed,.met,.ok{color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent)}.partial{color:var(--warn);background:color-mix(in srgb,var(--warn) 12%,transparent)}.unknown,.not_met,.bad{color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,transparent)}
+q,.quote{color:var(--muted);font-style:italic}.quote{border-left:3px solid var(--line);padding-left:10px;margin:6px 0}
+.sid,.fid{font:600 12px ui-monospace,Menlo,monospace;background:var(--chip);border-radius:5px;padding:1px 5px;text-decoration:none}
+.email{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0}.email pre{white-space:pre-wrap;font:14.5px/1.55 inherit;font-family:inherit;margin:10px 0 0}
+.meta{color:var(--muted);font-size:13px}.flag{color:var(--warn)}
+details summary{cursor:pointer;color:var(--accent)}
+ol.trace li,ul.tight li{margin:3px 0}
+.lede{font-size:16px}
+@media print{.card{break-inside:avoid}}
+</style>
+</head>
+<body><main>
+<p class="sub">FlytBase inbound agent · live run output · 20261008-195253-349-mock</p>
+<h1>Rodrigo Castillo · [mock company_legal_name]</h1>
+<p class="sub">Head of Operations, Northern Operations Division — “Autonomous inspection for our Atacama lithium sites”</p>
+<div class="chips">
+  <span class="chip">Run date 2026-10-08</span><span class="chip">mock:mock</span>
+  <span class="chip">search: duckduckgo</span><span class="chip">0.1s end-to-end</span>
+  <span class="chip">16 LLM calls</span><span class="chip">16 searches</span>
+  <span class="chip">15 sources</span>
+  <span class="chip">0 verified findings · 8 rejected</span>
+<span class="chip st bad">MOCK RUN — placeholder output</span></div>
+
+<section class="card">
+  <h2>At a glance</h2>
+  <div class="kpis">
+    <div class="kpi"><b>P4 - Disqualify / redirect</b><span>Priority</span></div>
+    <div class="kpi"><b>0/100</b><span>ICP fit</span></div>
+    <div class="kpi"><b>1/16</b><span>MEDDPICC completeness (6%)</span></div>
+    <div class="kpi"><b>Direct AE engagement</b><span>Go-to-market motion</span></div>
+  </div>
+  <h3>Next step</h3>
+  <p class="lede"><b>[mock action]</b> — [mock owner], [mock timing].</p>
+<p>Lead with: <a href="https://flytbase.com/case-studies/mining-site-inspection" target="_blank">Page https://flytbase.com/case-studies/mining-site-inspection</a></p></section>
+
+<section class="card">
+  <h2>Pipeline trace</h2>
+  <div class="tbl"><table>
+    <tr><th>Stage</th><th>Seconds</th><th>LLM calls</th><th>Searches</th><th>Fetches</th><th>Status</th></tr>
+<tr><td>Stage 0 · Intake: parse email, build lead profile</td><td>0.0</td><td>1</td><td>0</td><td>0</td><td>ok</td></tr><tr><td>Stage 1 · Qualification (MEDDPICC + ICP fit)</td><td>0.0</td><td>1</td><td>0</td><td>0</td><td>ok</td></tr><tr><td>Stage 2 · Deep account research (grounded)</td><td>0.0</td><td>6</td><td>10</td><td>23</td><td>ok</td></tr><tr><td>Stage 4 · Case study & material matching</td><td>0.0</td><td>2</td><td>4</td><td>4</td><td>ok</td></tr><tr><td>Stage 5 · Partner identification & GTM motion</td><td>0.0</td><td>2</td><td>2</td><td>4</td><td>ok</td></tr><tr><td>Stage 3 · Adaptive response sequence</td><td>0.0</td><td>3</td><td>0</td><td>0</td><td>ok</td></tr><tr><td>Stage 6 · AE handoff summary</td><td>0.0</td><td>1</td><td>0</td><td>0</td><td>ok</td></tr>  </table></div>
+  <p class="meta">Stage 3 runs after Stages 4 and 5 because the emails use their outputs. Every LLM prompt and response is in <code>llm_calls/</code>; every stage output is in <code>stages/</code>.</p>
+</section>
+
+<section class="card" id="input">
+  <h2>Input</h2>
+  <pre class="quote" style="white-space:pre-wrap;font-style:normal">From: Rodrigo Castillo (r.castillo@sqm.cl)
+Title: Head of Operations, Northern Operations Division
+Company: Sociedad Quimica y Minera de Chile (SQM), Chile
+Subject: Autonomous inspection for our Atacama lithium sites
+Context: Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous. Referred by Anglo American. Internal budget conversation scheduled for Q3.</pre>
+</section>
+
+<!-- ================= STAGE 1 ================= -->
+<section class="card">
+  <h2>Stage 1 · Qualification — MEDDPICC</h2>
+  <p><b>Why MEDDPICC:</b> [mock framework_rationale]</p>
+  <h3>Priority: P4 - Disqualify / redirect</h3>
+  <p class="sub">Poor fit; polite redirect.</p>
+  <ul class="tight"><li>ICP fit 0/100 from 0 of 8 criteria with email evidence.</li><li>MEDDPICC completeness 1/16 (6%): typical for a first inbound touch; discovery must close the gaps listed below.</li><li>Rule applied: fit >= 0 -> P4 - Disqualify / redirect.</li></ul>
+  <h3>MEDDPICC</h3>
+  <div class="tbl"><table>
+    <tr><th>Element</th><th>Status</th><th>Known (from email)</th><th>Missing</th><th>Discovery questions</th></tr>
+<tr>
+      <td><b>Metrics</b></td><td><span class="st partial">partial</span></td>
+      <td>[mock what_we_know]<div class="quote">“[mock evidence_quote]”</div></td>
+      <td>[mock what_is_missing]</td>
+      <td><ul class="tight"><li>[mock discovery_questions]</li><li>[mock discovery_questions]</li></ul></td></tr><tr>
+      <td><b>Economic Buyer</b></td><td><span class="st unknown">unknown</span></td>
+      <td>—</td>
+      <td>Not assessed</td>
+      <td><ul class="tight"></ul></td></tr><tr>
+      <td><b>Decision Criteria</b></td><td><span class="st unknown">unknown</span></td>
+      <td>—</td>
+      <td>Not assessed</td>
+      <td><ul class="tight"></ul></td></tr><tr>
+      <td><b>Decision Process</b></td><td><span class="st unknown">unknown</span></td>
+      <td>—</td>
+      <td>Not assessed</td>
+      <td><ul class="tight"></ul></td></tr><tr>
+      <td><b>Paper Process</b></td><td><span class="st unknown">unknown</span></td>
+      <td>—</td>
+      <td>Not assessed</td>
+      <td><ul class="tight"></ul></td></tr><tr>
+      <td><b>Identify Pain</b></td><td><span class="st unknown">unknown</span></td>
+      <td>—</td>
+      <td>Not assessed</td>
+      <td><ul class="tight"></ul></td></tr><tr>
+      <td><b>Champion</b></td><td><span class="st unknown">unknown</span></td>
+      <td>—</td>
+      <td>Not assessed</td>
+      <td><ul class="tight"></ul></td></tr><tr>
+      <td><b>Competition</b></td><td><span class="st unknown">unknown</span></td>
+      <td>—</td>
+      <td>Not assessed</td>
+      <td><ul class="tight"></ul></td></tr>  </table></div>
+  <h3>ICP fit — 0/100</h3>
+  <div class="tbl"><table>
+    <tr><th>Criterion</th><th>Weight</th><th>Assessment</th><th>Points</th><th>Evidence</th></tr>
+<tr><td>Target industry</td><td>20</td><td><span class="st unknown">unknown</span></td><td>0</td>
+      <td><span class="meta">not assessed</span></td></tr><tr><td>Large-scale sites</td><td>15</td><td><span class="st unknown">unknown</span></td><td>0</td>
+      <td><span class="meta">not assessed</span></td></tr><tr><td>Continuous operations</td><td>10</td><td><span class="st unknown">unknown</span></td><td>0</td>
+      <td><span class="meta">not assessed</span></td></tr><tr><td>Multi-site rollout potential</td><td>10</td><td><span class="st unknown">unknown</span></td><td>0</td>
+      <td><span class="meta">not assessed</span></td></tr><tr><td>Costly or hazardous manual inspection</td><td>15</td><td><span class="st unknown">unknown</span></td><td>0</td>
+      <td><span class="meta">not assessed</span></td></tr><tr><td>Warm referral</td><td>10</td><td><span class="st unknown">unknown</span></td><td>0</td>
+      <td><span class="meta">not assessed</span></td></tr><tr><td>Budget / timeline signal</td><td>10</td><td><span class="st unknown">unknown</span></td><td>0</td>
+      <td><span class="meta">not assessed</span></td></tr><tr><td>Senior operational owner</td><td>10</td><td><span class="st unknown">unknown</span></td><td>0</td>
+      <td><span class="meta">not assessed</span></td></tr>  </table></div>
+<h3>Ambiguities to resolve</h3><ul class="tight"><li>[mock ambiguities]</li><li>[mock ambiguities]</li></ul><h3>Risks</h3><ul class="tight"><li>[mock risks]</li><li>[mock risks]</li></ul><h3>Grounding checks</h3><ul class="tight flag"><li>Metrics: quote not found in email (score 0); downgraded confirmed -> partial</li></ul></section>
+
+<!-- ================= STAGE 2 ================= -->
+<section class="card">
+  <h2>Stage 2 · Account research — [mock company_legal_name]</h2>
+  <p class="meta">Company identification:
+not found in SEC EDGAR  </p>
+  <p class="meta">Every finding below carries a source id and a verbatim quote that the program located in the fetched source text. 8 claims failed that check and were removed (see appendix).</p>
+  <h3>Organizational structure & reporting lines <span class="meta">(0)</span></h3>
+<p class="flag">No verified findings for this dimension.</p>  <h3>Budget signals (filings, capex, technology spend) <span class="meta">(0)</span></h3>
+<p class="flag">No verified findings for this dimension.</p>  <h3>Recent news & strategic announcements <span class="meta">(0)</span></h3>
+<p class="flag">No verified findings for this dimension.</p>  <h3>Stakeholder / investor communications <span class="meta">(0)</span></h3>
+<p class="flag">No verified findings for this dimension.</p>  <h3>Sender verification</h3>
+  <p><span class="st partial">not publicly verified</span> No public source found that names Rodrigo Castillo at [mock company_short_name]. Title and division are taken from the contact form only and must be confirmed.</p>
+  <h3>Positioning recommendation</h3>
+  <p class="lede">[mock thesis]</p>
+  <div class="tbl"><table><tr><th>Value hook</th><th>Evidence</th><th>How to say it</th></tr>
+  </table></div>
+  <h3>Stakeholders</h3>
+  <ul class="tight"><li><b>[mock name_or_role]</b> — [mock why_involved] <span class="st partial">inferred_from_role</span> </li><li><b>[mock name_or_role]</b> — [mock why_involved] <span class="st partial">inferred_from_role</span> </li></ul>
+<h3>Risks & objections</h3><ul class="tight"><li>[mock risks_and_objections]</li><li>[mock risks_and_objections]</li></ul><h3>Avoid</h3><ul class="tight"><li>[mock avoid]</li><li>[mock avoid]</li></ul><h3>Research gaps</h3><ul class="tight flag"><li>No verified findings for 'org_structure'</li><li>No verified findings for 'budget_signals'</li><li>No verified findings for 'news'</li><li>No verified findings for 'stakeholder_letters'</li><li>Sender's role and reporting line are not publicly verifiable; confirm on first call.</li></ul></section>
+
+<!-- ================= STAGE 3 ================= -->
+<section class="card">
+  <h2>Stage 3 · Adaptive response sequence</h2>
+  <p><b>Strategy:</b> [mock strategy]</p>
+  <p><b>Tone:</b> [mock tone_notes]</p>
+  <div class="email">
+    <div class="meta"><b>Email 3</b> · [mock send_timing] · trigger: [mock trigger]</div>
+    <div class="meta">Goal: [mock goal] · targets: Metrics, Metrics · research: <a class="fid" href="#[mock finding_ids]" title="">[mock finding_ids]</a> <a class="fid" href="#[mock finding_ids]" title="">[mock finding_ids]</a> </div>
+    <h3 style="margin-top:10px">[mock subject]</h3>
+    <pre>[mock body]</pre>
+<p class="meta">Materials: <a href="[mock materials]" target="_blank">[mock materials]</a> <a href="[mock materials]" target="_blank">[mock materials]</a> </p>    <p class="meta"><b>Why this step:</b> [mock why_this_step]</p>
+  </div>
+  <div class="email">
+    <div class="meta"><b>Email 3</b> · [mock send_timing] · trigger: [mock trigger]</div>
+    <div class="meta">Goal: [mock goal] · targets: Metrics, Metrics · research: <a class="fid" href="#[mock finding_ids]" title="">[mock finding_ids]</a> <a class="fid" href="#[mock finding_ids]" title="">[mock finding_ids]</a> </div>
+    <h3 style="margin-top:10px">[mock subject]</h3>
+    <pre>[mock body]</pre>
+<p class="meta">Materials: <a href="[mock materials]" target="_blank">[mock materials]</a> <a href="[mock materials]" target="_blank">[mock materials]</a> </p>    <p class="meta"><b>Why this step:</b> [mock why_this_step]</p>
+  </div>
+  <h3>Reply branches</h3>
+  <div class="tbl"><table><tr><th>If he replies…</th><th>Next move</th></tr>
+<tr><td>[mock if_reply]</td><td>[mock next_move]</td></tr><tr><td>[mock if_reply]</td><td>[mock next_move]</td></tr></table></div>
+  <h3>Discovery coverage</h3>
+  <div class="tbl"><table><tr><th>Open MEDDPICC element</th><th>Targeted in email(s)</th></tr>
+<tr><td>Metrics</td><td>3, 3</td></tr><tr><td>Economic Buyer</td><td><span class="st bad">not covered</span></td></tr><tr><td>Decision Criteria</td><td><span class="st bad">not covered</span></td></tr><tr><td>Decision Process</td><td><span class="st bad">not covered</span></td></tr><tr><td>Paper Process</td><td><span class="st bad">not covered</span></td></tr><tr><td>Identify Pain</td><td><span class="st bad">not covered</span></td></tr><tr><td>Champion</td><td><span class="st bad">not covered</span></td></tr><tr><td>Competition</td><td><span class="st bad">not covered</span></td></tr></table></div>
+  <p class="meta">Checker revisions: 2. <span class="flag">Open issues: email 3: cites unknown finding ids ['[mock finding_ids]', '[mock finding_ids]']; email 3: uses no verified research finding; email 3: contains a placeholder; email 3: cites unknown finding ids ['[mock finding_ids]', '[mock finding_ids]']; email 3: uses no verified research finding; email 3: contains a placeholder; MEDDPICC gaps never targeted: ['Economic Buyer', 'Decision Criteria', 'Decision Process', 'Paper Process', 'Identify Pain', 'Champion', 'Competition']; recommended proof content https://flytbase.com/case-studies/mining-site-inspection is not used in any email</span></p>
+</section>
+
+<!-- ================= STAGE 4 ================= -->
+<section class="card">
+  <h2>Stage 4 · Case study & material matching</h2>
+  <p class="meta">Discovery: 3 sitemap URLs → 2 default-language pages → 2 in pool (0 via site search) → 2 fetched → 2 rubric-scored.</p>
+  <p>Referral entities parsed from the email: <b>[mock referral_entities], [mock referral_entities]</b>.
+<span class="flag">No vendor page mentions them.</span></p>
+  <h3>Recommended: <a href="https://flytbase.com/case-studies/mining-site-inspection" target="_blank">Page https://flytbase.com/case-studies/mining-site-inspection</a> <span class="meta">(case-studies, score 7.9)</span></h3>
+  <p><b>Why it is the strongest fit:</b> [mock why_strongest]</p>
+  <p><b>How to use it:</b> [mock how_to_use_in_sales]</p>
+  <p><b>Where it does not match:</b> [mock gaps_vs_lead]</p>  <h3>Ranking</h3>
+  <div class="tbl"><table>
+    <tr><th>#</th><th>Content</th><th>Score</th><th>Rubric (ind/use/env/proof)</th><th>Referral</th><th>Region</th><th>Keywords</th><th>Section</th></tr>
+<tr><td>1</td><td><a href="https://flytbase.com/case-studies/mining-site-inspection" target="_blank">Page https://flytbase.com/case-studies/mining-site-inspection</a><div class="meta"></div></td>
+      <td><b>7.9</b></td>
+      <td>—</td>
+      <td>0</td><td>0.0</td><td>0.286</td><td>case-studies</td></tr><tr><td>2</td><td><a href="https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine" target="_blank">Page https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine</a><div class="meta"></div></td>
+      <td><b>5.4</b></td>
+      <td>—</td>
+      <td>0</td><td>0.0</td><td>0.143</td><td>blog</td></tr>  </table></div>
+  <p class="meta">Score = 100 × (0.45 rubric + 0.25 referral + 0.15 region + 0.10 keywords + 0.05 section weight). Weights in <code>agent/config.py</code>.</p>
+</section>
+
+<!-- ================= STAGE 5 ================= -->
+<section class="card">
+  <h2>Stage 5 · Go-to-market motion</h2>
+  <p class="lede"><b>Direct AE engagement</b> · partner type: System Integrator (to recruit)</p>
+  <h3>Deal complexity: high</h3>
+  <ul class="tight"><li><span class="st ok">yes</span> multi_site (>=2 sites in scope)</li><li><span class="st unknown">no</span> continuous_ops (24/7)</li><li><span class="st unknown">no</span> enterprise_buyer (files annual report with a securities regulator)</li><li><span class="st ok">yes</span> harsh_or_remote_environment</li><li><span class="st ok">yes</span> autonomous/BVLOS operations (regulatory approval likely)</li><li><span class="st ok">yes</span> strategic_referral (existing-customer relationship to protect)</li><li><span class="st ok">yes</span> senior_buyer (VP/Head or above)</li></ul>
+  <h3>Decision trace</h3>
+  <ol class="trace"><li>Deal complexity: high.</li><li>Partners in lead's country: 0; elsewhere in region: 0.</li><li>Rule: high complexity + no regional partner -> direct AE engagement; recruit a local integrator.</li></ol>
+  <p class="meta">Partner pages read: <a href="https://flytbase.com/partner" target="_blank">https://flytbase.com/partner</a> · partners extracted: 0 (2 rejected) · in country: 0 · elsewhere in region: 0</p>
+  <h3>Rationale</h3><p>[mock rationale]</p>
+  <p><b>AE owns:</b> [mock ae_role]</p><p><b>Partner owns:</b> [mock partner_role]</p>
+<ul class="tight"><li>[mock risks]</li><li>[mock risks]</li></ul></section>
+
+<!-- ================= STAGE 6 ================= -->
+<section class="card">
+  <h2>Stage 6 · AE handoff</h2>
+  <h3>Buyer context</h3>
+  <p>[mock who_he_is]</p>
+  <p><b>What he cares about</b></p><ul class="tight"><li>[mock what_he_cares_about]</li><li>[mock what_he_cares_about]</li></ul>
+  <p><b>Who else is involved</b></p><ul class="tight"><li><b>[mock name_or_role]</b> — [mock why_involved] <span class="st partial">inferred_from_role</span> </li><li><b>[mock name_or_role]</b> — [mock why_involved] <span class="st partial">inferred_from_role</span> </li></ul>
+  <h3>Qualification status</h3>
+  <p>MEDDPICC 1/16 · ICP fit 0/100 · <b>P4 - Disqualify / redirect</b></p>
+  <div class="tbl"><table><tr><th>Known</th><th>Unknown / to confirm</th></tr><tr>
+    <td><ul class="tight"><li>Metrics: [mock what_we_know]</li></ul></td>
+    <td><ul class="tight"><li>Metrics: [mock what_is_missing]</li><li>Economic Buyer: Not assessed</li><li>Decision Criteria: Not assessed</li><li>Decision Process: Not assessed</li><li>Paper Process: Not assessed</li><li>Identify Pain: Not assessed</li><li>Champion: Not assessed</li><li>Competition: Not assessed</li></ul></td></tr></table></div>
+  <h3>Top 3 research findings</h3>
+  <ol></ol>
+  <h3>Recommended case study</h3>
+<p><a href="https://flytbase.com/case-studies/mining-site-inspection" target="_blank">Page https://flytbase.com/case-studies/mining-site-inspection</a> — [mock why_strongest]</p>  <h3>Suggested next step</h3>
+  <p class="lede"><b>[mock action]</b></p>
+  <p>Owner: [mock owner] · Timing: [mock timing]</p>
+  <p>[mock rationale]</p>
+  <p><b>Agenda</b></p><ol class="tight"><li>[mock agenda]</li><li>[mock agenda]</li></ol>
+  <p><b>First-call questions</b></p><ul class="tight"><li>[mock first_call_questions]</li><li>[mock first_call_questions]</li></ul>
+<p><b>Watch-outs</b></p><ul class="tight"><li>[mock watch_outs]</li><li>[mock watch_outs]</li></ul>  <p class="meta">Go-to-market: Direct AE engagement. <span class="flag">handoff cited finding ids that do not exist; removed; only 0 verified top findings available</span></p>
+</section>
+
+<!-- ================= APPENDIX ================= -->
+<section class="card">
+  <h2>Appendix</h2>
+  <details><summary>Sources (15)</summary>
+    <div class="tbl"><table><tr><th>Id</th><th>Title</th><th>Kind</th><th>Used for</th></tr>
+<tr><td><span class="sid">S1</span></td><td><a href="#input" target="_blank">Inbound email from Rodrigo Castillo</a></td><td>input</td><td>email</td></tr><tr><td><span class="sid">S2</span></td><td><a href="https://example.org/mock-query/0" target="_blank">Page https://example.org/mock-query/0</a></td><td>web</td><td>org_structure</td></tr><tr><td><span class="sid">S3</span></td><td><a href="https://example.org/mock-query/1" target="_blank">Page https://example.org/mock-query/1</a></td><td>web</td><td>org_structure</td></tr><tr><td><span class="sid">S4</span></td><td><a href="https://example.org/mock-company-short-name-capital-expendit/0" target="_blank">Page https://example.org/mock-company-short-name-capital-expendit/0</a></td><td>web</td><td>budget_signals</td></tr><tr><td><span class="sid">S5</span></td><td><a href="https://example.org/mock-company-short-name-capital-expendit/1" target="_blank">Page https://example.org/mock-company-short-name-capital-expendit/1</a></td><td>web</td><td>budget_signals</td></tr><tr><td><span class="sid">S6</span></td><td><a href="https://example.org/mock-company-short-name-investment-plan-/0" target="_blank">Page https://example.org/mock-company-short-name-investment-plan-/0</a></td><td>web</td><td>budget_signals</td></tr><tr><td><span class="sid">S7</span></td><td><a href="https://example.org/mock-company-short-name-investment-plan-/1" target="_blank">Page https://example.org/mock-company-short-name-investment-plan-/1</a></td><td>web</td><td>budget_signals</td></tr><tr><td><span class="sid">S8</span></td><td><a href="https://example.org/mock-company-short-name-news-2026/0" target="_blank">Page https://example.org/mock-company-short-name-news-2026/0</a></td><td>web</td><td>news</td></tr><tr><td><span class="sid">S9</span></td><td><a href="https://example.org/mock-company-short-name-news-2026/1" target="_blank">Page https://example.org/mock-company-short-name-news-2026/1</a></td><td>web</td><td>news</td></tr><tr><td><span class="sid">S10</span></td><td><a href="https://example.org/mock-company-short-name-press-release-mo/0" target="_blank">Page https://example.org/mock-company-short-name-press-release-mo/0</a></td><td>web</td><td>news</td></tr><tr><td><span class="sid">S11</span></td><td><a href="https://example.org/mock-company-short-name-press-release-mo/1" target="_blank">Page https://example.org/mock-company-short-name-press-release-mo/1</a></td><td>web</td><td>news</td></tr><tr><td><span class="sid">S12</span></td><td><a href="https://example.org/mock-company-short-name-annual-report-le/0" target="_blank">Page https://example.org/mock-company-short-name-annual-report-le/0</a></td><td>web</td><td>stakeholder_letters</td></tr><tr><td><span class="sid">S13</span></td><td><a href="https://example.org/mock-company-short-name-annual-report-le/1" target="_blank">Page https://example.org/mock-company-short-name-annual-report-le/1</a></td><td>web</td><td>stakeholder_letters</td></tr><tr><td><span class="sid">S14</span></td><td><a href="https://example.org/mock-company-short-name-investor-present/0" target="_blank">Page https://example.org/mock-company-short-name-investor-present/0</a></td><td>web</td><td>stakeholder_letters</td></tr><tr><td><span class="sid">S15</span></td><td><a href="https://example.org/mock-company-short-name-investor-present/1" target="_blank">Page https://example.org/mock-company-short-name-investor-present/1</a></td><td>web</td><td>stakeholder_letters</td></tr>    </table></div></details>
+  <details><summary>Rejected claims (8) — removed by the grounding gate</summary>
+    <div class="tbl"><table><tr><th>Stage</th><th>Claim</th><th>Source</th><th>Reason</th></tr>
+<tr><td>research/org_structure</td><td>[mock claim]</td><td>S1</td><td>quote not found in source (match 0/100)</td></tr><tr><td>research/org_structure</td><td>[mock claim]</td><td>S1</td><td>quote not found in source (match 0/100)</td></tr><tr><td>research/budget_signals</td><td>[mock claim]</td><td>S1</td><td>quote not found in source (match 0/100)</td></tr><tr><td>research/budget_signals</td><td>[mock claim]</td><td>S1</td><td>quote not found in source (match 0/100)</td></tr><tr><td>research/news</td><td>[mock claim]</td><td>S1</td><td>quote not found in source (match 0/100)</td></tr><tr><td>research/news</td><td>[mock claim]</td><td>S1</td><td>quote not found in source (match 0/100)</td></tr><tr><td>research/stakeholder_letters</td><td>[mock claim]</td><td>S1</td><td>quote not found in source (match 0/100)</td></tr><tr><td>research/stakeholder_letters</td><td>[mock claim]</td><td>S1</td><td>quote not found in source (match 0/100)</td></tr>    </table></div></details>
+  <details><summary>Search queries (7)</summary>
+    <ul class="tight"><li><b>org_structure</b>: [mock query] <span class="meta">— [mock why]</span></li><li><b>budget_signals</b>: [mock company_short_name] capital expenditure plan 2026 <span class="meta">— coverage fallback</span></li><li><b>budget_signals</b>: [mock company_short_name] investment plan technology automation <span class="meta">— coverage fallback</span></li><li><b>news</b>: [mock company_short_name] news 2026 <span class="meta">— coverage fallback</span></li><li><b>news</b>: [mock company_short_name] press release [mock sub_industry] 2026 <span class="meta">— coverage fallback</span></li><li><b>stakeholder_letters</b>: [mock company_short_name] annual report letter from chairman <span class="meta">— coverage fallback</span></li><li><b>stakeholder_letters</b>: [mock company_short_name] investor presentation 2026 <span class="meta">— coverage fallback</span></li></ul></details>
+</section>
+</main></body></html>

@@ -1,0 +1,63 @@
+{
+  "schema": "PositioningDraft",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: write the positioning recommendation for this account, using ONLY the verified findings provided\n(cite them by id). Stakeholders: list verified people from the findings (basis=verified, with finding ids) and,\nseparately, roles that are typically involved in such a purchase (basis=inferred_from_role, no names).\nNever invent a person's name.",
+  "user": "<lead>\n{\n \"company_legal_name\": \"[mock company_legal_name]\",\n \"company_short_name\": \"[mock company_short_name]\",\n \"company_name_variants\": [\n  \"[mock company_name_variants]\",\n  \"[mock company_name_variants]\"\n ],\n \"hq_country\": \"[mock hq_country]\",\n \"region\": \"[mock region]\",\n \"region_markets\": [\n  \"[mock region_markets]\",\n  \"[mock region_markets]\"\n ],\n \"industry\": \"[mock industry]\",\n \"sub_industry\": \"[mock sub_industry]\",\n \"use_case\": \"[mock use_case]\",\n \"asset_or_site_types\": [\n  \"[mock asset_or_site_types]\",\n  \"[mock asset_or_site_types]\"\n ],\n \"site_count\": 3,\n \"site_locations\": [\n  \"[mock site_locations]\",\n  \"[mock site_locations]\"\n ],\n \"operating_conditions\": [\n  \"[mock operating_conditions]\",\n  \"[mock operating_conditions]\"\n ],\n \"stated_pains\": [\n  \"[mock stated_pains]\",\n  \"[mock stated_pains]\"\n ],\n \"referral_entities\": [\n  \"[mock referral_entities]\",\n  \"[mock referral_entities]\"\n ],\n \"timeline_signals\": [\n  \"[mock timeline_signals]\",\n  \"[mock timeline_signals]\"\n ],\n \"budget_signals\": [\n  \"[mock budget_signals]\",\n  \"[mock budget_signals]\"\n ],\n \"seniority\": \"C-level\",\n \"matching_keywords\": [\n  \"[mock matching_keywords]\",\n  \"[mock matching_keywords]\"\n ]\n}\n</lead>\n<qualification_gaps>\nMetrics: [mock what_is_missing]\nEconomic Buyer: Not assessed\nDecision Criteria: Not assessed\nDecision Process: Not assessed\nPaper Process: Not assessed\nIdentify Pain: Not assessed\nChampion: Not assessed\nCompetition: Not assessed\n</qualification_gaps>\n<verified_findings>\n\n</verified_findings>",
+  "response": {
+    "thesis": "[mock thesis]",
+    "value_hooks": [
+      {
+        "hook": "[mock hook]",
+        "finding_ids": [
+          "[mock finding_ids]",
+          "[mock finding_ids]"
+        ],
+        "how_to_say_it": "[mock how_to_say_it]"
+      },
+      {
+        "hook": "[mock hook]",
+        "finding_ids": [
+          "[mock finding_ids]",
+          "[mock finding_ids]"
+        ],
+        "how_to_say_it": "[mock how_to_say_it]"
+      }
+    ],
+    "likely_stakeholders": [
+      {
+        "name_or_role": "[mock name_or_role]",
+        "why_involved": "[mock why_involved]",
+        "basis": "verified",
+        "finding_ids": [
+          "[mock finding_ids]",
+          "[mock finding_ids]"
+        ]
+      },
+      {
+        "name_or_role": "[mock name_or_role]",
+        "why_involved": "[mock why_involved]",
+        "basis": "verified",
+        "finding_ids": [
+          "[mock finding_ids]",
+          "[mock finding_ids]"
+        ]
+      }
+    ],
+    "risks_and_objections": [
+      "[mock risks_and_objections]",
+      "[mock risks_and_objections]"
+    ],
+    "avoid": [
+      "[mock avoid]",
+      "[mock avoid]"
+    ]
+  },
+  "valid": true
+}

@@ -1,0 +1,101 @@
+{
+  "motion": "Hybrid: AE-led, partner-delivered",
+  "complexity_level": "high",
+  "complexity_factors": {
+    "multi_site (>=2 sites in scope)": true,
+    "continuous_ops (24/7)": true,
+    "enterprise_buyer (files annual report with a securities regulator)": true,
+    "harsh_or_remote_environment": true,
+    "autonomous/BVLOS operations (regulatory approval likely)": true,
+    "strategic_referral (existing-customer relationship to protect)": true,
+    "senior_buyer (VP/Head or above)": true
+  },
+  "decision_trace": [
+    "Deal complexity: high.",
+    "Partners in lead's country: 1; elsewhere in region: 5.",
+    "Rule: high complexity + regional partner available -> AE owns the account and commercials; partner delivers hardware, installation, permits and local support.",
+    "Shortlist (points): Dronestore Chile 7; FS Systems 7; UAVLatam 7"
+  ],
+  "partner_pages": [
+    "https://flytbase.com/partner",
+    "https://flytbase.com/partner-academy"
+  ],
+  "partners_found": 124,
+  "partners_rejected": 0,
+  "in_country": 1,
+  "in_region": 5,
+  "recommended_partner_type": "System Integrator / Solution Provider",
+  "shortlist": [
+    {
+      "name": "Dronestore Chile",
+      "country": "Chile",
+      "tier": "Gold",
+      "types": [
+        "System Integrator",
+        "Solution Provider"
+      ],
+      "source_url": "https://flytbase.com/partner",
+      "same_country": true,
+      "same_region": true,
+      "proven_on_reference_account": false,
+      "points": 7.0,
+      "reasons": [
+        "based in Chile",
+        "system integrator",
+        "solution provider",
+        "Gold tier"
+      ]
+    },
+    {
+      "name": "FS Systems",
+      "country": "South Africa",
+      "tier": "Gold",
+      "types": [
+        "System Integrator",
+        "Solution Provider"
+      ],
+      "source_url": "https://flytbase.com/partner",
+      "same_country": false,
+      "same_region": false,
+      "proven_on_reference_account": true,
+      "points": 7.0,
+      "reasons": [
+        "named in the matched reference deployment",
+        "system integrator",
+        "solution provider",
+        "Gold tier"
+      ]
+    },
+    {
+      "name": "UAVLatam",
+      "country": "Argentina",
+      "tier": "Bronze",
+      "types": [
+        "System Integrator",
+        "Solution Provider"
+      ],
+      "source_url": "https://flytbase.com/partner",
+      "same_country": false,
+      "same_region": true,
+      "proven_on_reference_account": true,
+      "points": 7.0,
+      "reasons": [
+        "in region (Argentina)",
+        "named in the matched reference deployment",
+        "system integrator",
+        "solution provider"
+      ]
+    }
+  ],
+  "rationale": {
+    "rationale": "Due to the high complexity of this multi-site enterprise deal involving autonomous BVLOS operations in harsh environments for a senior buyer at SQM, a partner-led delivery model is required. Dronestore Chile is the primary local partner to handle physical logistics, while FlytBase maintains direct control over the strategic account relationship and software commercials to ensure alignment with the client's 24/7 operational requirements.",
+    "ae_role": "The AE will own the account strategy, lead commercial negotiations for the FlytBase software licenses, manage the senior stakeholder relationship at SQM, and coordinate with the partner to ensure the solution meets enterprise standards.",
+    "partner_role": "Dronestore Chile (or regional partners like UAVLatam/FS Systems) will be responsible for hardware procurement, on-site installation at the three mining sites, securing local BVLOS regulatory permits from DGAC, and providing 24/7 first-line maintenance and technical support.",
+    "risks": [
+      "Regulatory delays in obtaining BVLOS waivers for remote mining sites in Chile",
+      "Hardware performance issues in harsh/remote environmental conditions",
+      "Coordination overhead between FlytBase, the partner, and SQM's internal IT/Security teams",
+      "Ensuring consistent service levels across all three geographically dispersed sites"
+    ]
+  }
+}

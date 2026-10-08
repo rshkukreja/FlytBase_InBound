@@ -1,0 +1,78 @@
+{
+  "schema": "QueryPlan",
+  "provider": "openai",
+  "model": "gemini-3-flash-preview",
+  "attempt": 1,
+  "seconds": 7.8,
+  "usage": {
+    "input_tokens": 467,
+    "output_tokens": 804
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: plan web searches for account research. Today's date is 2026-10-08.\nWrite 3 specific queries per dimension. Prefer primary sources: annual reports, 20-F/10-K, investor\npresentations, earnings releases, sustainability reports, the company's own press room, reputable news.\nInclude the company name in every query. Include the current or previous year where recency matters.",
+  "user": "Company: Sociedad Química y Minera de Chile S.A. (SQM), Chile\nLead context: Lithium Extraction; Autonomous Inspection; sites: Atacama Desert, Chile\nDimensions:\n- org_structure: Organizational structure, business units, operating sites and executives relevant to an operations leader in the lead's division/region; who the lead likely reports to.\n- budget_signals: Capex/opex guidance, investment plans, technology/automation/digital spend, safety and contractor costs from public filings and investor material.\n- news: Recent news, press releases and strategic announcements (last ~18 months).\n- stakeholder_letters: Chairman/CEO letters, investor presentations, sustainability reports and earnings commentary that reveal operating priorities.",
+  "response": {
+    "queries": [
+      {
+        "dimension": "org_structure",
+        "query": "SQM Sociedad Química y Minera de Chile organizational chart lithium division 2026",
+        "why": "To identify the specific business unit hierarchy for lithium extraction and locate the operations leaders responsible for the Atacama sites."
+      },
+      {
+        "dimension": "org_structure",
+        "query": "SQM Atacama operations site managers and digital transformation leadership 2025 2026",
+        "why": "To find the individuals managing the physical sites where drone docks would be deployed and their reporting lines to corporate."
+      },
+      {
+        "dimension": "org_structure",
+        "query": "SQM executive committee and heads of mining operations 2026",
+        "why": "To understand the top-level decision-makers who oversee operational efficiency and safety across all Chilean mining assets."
+      },
+      {
+        "dimension": "budget_signals",
+        "query": "SQM 20-F annual report 2025 capital expenditures automation and technology",
+        "why": "To extract specific dollar amounts allocated to technological upgrades and autonomous systems in their most recent SEC filings."
+      },
+      {
+        "dimension": "budget_signals",
+        "query": "SQM investor presentation 2026 lithium division capex guidance and digital spend",
+        "why": "To identify forward-looking investment plans for the current and upcoming fiscal year regarding site infrastructure."
+      },
+      {
+        "dimension": "budget_signals",
+        "query": "SQM sustainability report 2025 safety technology and contractor cost reduction",
+        "why": "To find budget justifications related to safety and reducing human presence in hazardous areas, which supports the case for autonomous drones."
+      },
+      {
+        "dimension": "news",
+        "query": "SQM press releases autonomous inspection and drone technology 2025 2026",
+        "why": "To see if the company has already begun piloting drone-in-a-box solutions or similar autonomous robotics."
+      },
+      {
+        "dimension": "news",
+        "query": "SQM Atacama desert operations strategic announcements 2026",
+        "why": "To stay informed on recent developments or expansions at the specific site mentioned in the lead context."
+      },
+      {
+        "dimension": "news",
+        "query": "SQM partnership announcements with mining tech startups 2025 2026",
+        "why": "To identify their openness to third-party software platforms and autonomous hardware integrations."
+      },
+      {
+        "dimension": "stakeholder_letters",
+        "query": "SQM CEO letter to shareholders 2025 2026 operational priorities",
+        "why": "To align FlytBase's value proposition with the CEO's stated goals for operational excellence and digital maturity."
+      },
+      {
+        "dimension": "stakeholder_letters",
+        "query": "SQM annual report 2025 Chairman's statement on innovation and safety",
+        "why": "To find high-level mandates for improving site safety and monitoring through innovation."
+      },
+      {
+        "dimension": "stakeholder_letters",
+        "query": "SQM earnings call transcript 2026 Q2 Q3 technology and automation commentary",
+        "why": "To capture real-time executive sentiment regarding the deployment of autonomous systems to offset labor or environmental risks."
+      }
+    ]
+  },
+  "valid": true
+}

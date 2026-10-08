@@ -1,0 +1,36 @@
+{
+  "motion": "Direct AE engagement",
+  "complexity_level": "high",
+  "complexity_factors": {
+    "multi_site (>=2 sites in scope)": true,
+    "continuous_ops (24/7)": false,
+    "enterprise_buyer (files annual report with a securities regulator)": false,
+    "harsh_or_remote_environment": true,
+    "autonomous/BVLOS operations (regulatory approval likely)": true,
+    "strategic_referral (existing-customer relationship to protect)": true,
+    "senior_buyer (VP/Head or above)": true
+  },
+  "decision_trace": [
+    "Deal complexity: high.",
+    "Partners in lead's country: 0; elsewhere in region: 0.",
+    "Rule: high complexity + no regional partner -> direct AE engagement; recruit a local integrator."
+  ],
+  "partner_pages": [
+    "https://flytbase.com/partner"
+  ],
+  "partners_found": 0,
+  "partners_rejected": 2,
+  "in_country": 0,
+  "in_region": 0,
+  "recommended_partner_type": "System Integrator (to recruit)",
+  "shortlist": [],
+  "rationale": {
+    "rationale": "[mock rationale]",
+    "ae_role": "[mock ae_role]",
+    "partner_role": "[mock partner_role]",
+    "risks": [
+      "[mock risks]",
+      "[mock risks]"
+    ]
+  }
+}

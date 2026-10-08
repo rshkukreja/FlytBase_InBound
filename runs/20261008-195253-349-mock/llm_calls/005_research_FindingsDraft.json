@@ -1,0 +1,36 @@
+{
+  "schema": "FindingsDraft",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: extract research findings for the dimension 'budget_signals' — Capex/opex guidance, investment plans, technology/automation/digital spend, safety and contractor costs from public filings and investor material.\nReturn up to 8 findings, most strategically useful first. Prefer numbers, dates, named\nexecutives, named sites/projects and explicit priorities over generic statements. Skip trivia.\nEach finding needs a source_id from the <sources> block and a verbatim quote from that source.\nToday's date is 2026-10-08; say in date_or_period how old a fact is.\nGrounding rules (strict):\n- Use ONLY the text provided inside <sources> or <email>. Do not use prior knowledge for facts.\n- Every evidence_quote must be copied character-for-character from the cited text (15-60 words,\n  one contiguous span, no paraphrase, no ellipsis). A program will check it; non-matching claims are discarded.\n- If the provided text does not support something, leave it out or mark it unknown. Never guess names,\n  numbers, dates or titles.\n",
+  "user": "Account: [mock company_legal_name] ([mock company_short_name]). Lead: Head of Operations, Northern Operations Division; interest: [mock use_case] at [mock site_locations], [mock site_locations].\nSet dimension='budget_signals' on every finding.\n\n<sources>\n<source id=\"S4\" kind=\"web\" url=\"https://example.org/mock-company-short-name-capital-expendit/0\" title=\"Page https://example.org/mock-company-short-name-capital-expendit/0\">\nPage https://example.org/mock-company-short-name-capital-expendit/0\nPartners\nMock page text about mining operations, autonomous drone docks and inspection in Chile.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nMock Partner One Chile Gold System Integrator\n</source>\n<source id=\"S5\" kind=\"web\" url=\"https://example.org/mock-company-short-name-capital-expendit/1\" title=\"Page https://example.org/mock-company-short-name-capital-expendit/1\">\nPage https://example.org/mock-company-short-name-capital-expendit/1\nPartners\nMock page text about mining operations, autonomous drone docks and inspection in Chile.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nMock Partner One Chile Gold System Integrator\n</source>\n<source id=\"S6\" kind=\"web\" url=\"https://example.org/mock-company-short-name-investment-plan-/0\" title=\"Page https://example.org/mock-company-short-name-investment-plan-/0\">\nPage https://example.org/mock-company-short-name-investment-plan-/0\nPartners\nMock page text about mining operations, autonomous drone docks and inspection in Chile.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nMock Partner One Chile Gold System Integrator\n</source>\n<source id=\"S7\" kind=\"web\" url=\"https://example.org/mock-company-short-name-investment-plan-/1\" title=\"Page https://example.org/mock-company-short-name-investment-plan-/1\">\nPage https://example.org/mock-company-short-name-investment-plan-/1\nPartners\nMock page text about mining operations, autonomous drone docks and inspection in Chile.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nSynthetic filler sentence used only for offline wiring tests of the pipeline.\nMock Partner One Chile Gold System Integrator\n</source>\n</sources>",
+  "response": {
+    "findings": [
+      {
+        "id": "[mock id]",
+        "dimension": "org_structure",
+        "claim": "[mock claim]",
+        "source_id": "S1",
+        "evidence_quote": "[mock evidence_quote]",
+        "date_or_period": "[mock date_or_period]",
+        "so_what": "[mock so_what]"
+      },
+      {
+        "id": "[mock id]",
+        "dimension": "org_structure",
+        "claim": "[mock claim]",
+        "source_id": "S1",
+        "evidence_quote": "[mock evidence_quote]",
+        "date_or_period": "[mock date_or_period]",
+        "so_what": "[mock so_what]"
+      }
+    ]
+  },
+  "valid": true
+}

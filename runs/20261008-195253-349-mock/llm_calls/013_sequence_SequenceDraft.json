@@ -1,0 +1,72 @@
+{
+  "schema": "SequenceDraft",
+  "provider": "mock",
+  "model": "mock",
+  "attempt": 1,
+  "seconds": 0.0,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "system": "You are the research and qualification engine behind FlytBase's inbound sales desk. FlytBase sells an autonomy software platform that runs drones and drone docks (drone-in-a-box) at large industrial sites for inspection, security and emergency response, without pilots on site.\nTask: write an adaptive outbound email sequence replying to the inbound lead.\nRequirements:\n- Email 1 is the reply to his inbound request; send fast. Later emails follow only if there is no reply or\n  based on the reply (give reply branches).\n- Each email must use at least one research finding (cite ids in finding_ids) in a way that shows homework,\n  not flattery. Never state a fact that is not in the findings, the email, or the vendor material provided.\n- Each email must target specific MEDDPICC unknowns with 1-2 easy-to-answer questions; across the sequence,\n  cover every unknown/partial element listed.\n- Audience: a senior operations leader at a large mining/industrial company. Peer-to-peer, concise, specific,\n  no hype, no exclamation marks, no buzzwords. Email 1 <= 170 words; others <= 150 words.\n- Reference the recommended proof content where it helps (put its URL in materials).\n- The 'why_this_step' must explain the progression logic.\n- Sign as 'FlytBase Inbound Team' (no placeholder names, no [brackets]).\nToday's date is 2026-10-08.",
+  "user": "<email>\nFrom: Rodrigo Castillo (r.castillo@sqm.cl)\nTitle: Head of Operations, Northern Operations Division\nCompany: Sociedad Quimica y Minera de Chile (SQM), Chile\nSubject: Autonomous inspection for our Atacama lithium sites\nContext: Looking for drone-based inspection for 3 large-scale, 24/7 lithium extraction sites in the Atacama Desert. Contracted crews are expensive and hazardous. Referred by Anglo American. Internal budget conversation scheduled for Q3.\n</email>\n<qualification>\nPriority: P4 - Disqualify / redirect\nOpen MEDDPICC elements (must all be targeted): ['Metrics', 'Economic Buyer', 'Decision Criteria', 'Decision Process', 'Paper Process', 'Identify Pain', 'Champion', 'Competition']\n- Metrics [partial]: missing: [mock what_is_missing] | questions: [mock discovery_questions]; [mock discovery_questions]\n- Economic Buyer [unknown]: missing: Not assessed | questions: \n- Decision Criteria [unknown]: missing: Not assessed | questions: \n- Decision Process [unknown]: missing: Not assessed | questions: \n- Paper Process [unknown]: missing: Not assessed | questions: \n- Identify Pain [unknown]: missing: Not assessed | questions: \n- Champion [unknown]: missing: Not assessed | questions: \n- Competition [unknown]: missing: Not assessed | questions: \nAmbiguities to resolve: [mock ambiguities]; [mock ambiguities]\n</qualification>\n<verified_findings>\n\n</verified_findings>\n<positioning>\n[mock thesis]\n\nAvoid: [mock avoid]; [mock avoid]\n</positioning>\n<proof_content>\n- https://flytbase.com/case-studies/mining-site-inspection (case-studies): Page https://flytbase.com/case-studies/mining-site-inspection\n- https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine (blog): Page https://flytbase.com/blog/referral-partner-deploys-docks-at-copper-mine\nWhy it fits: [mock why_strongest]\n</proof_content>\n<go_to_market>\nDirect AE engagement. Partner shortlist: none\n</go_to_market>\nSender verification: No public source found that names Rodrigo Castillo at [mock company_short_name]. Title and division are taken from the contact form only and must be confirmed.\nWrite 4 emails (reply + 3 follow-ups) and 3-5 reply branches.",
+  "response": {
+    "strategy": "[mock strategy]",
+    "tone_notes": "[mock tone_notes]",
+    "emails": [
+      {
+        "step": 3,
+        "send_timing": "[mock send_timing]",
+        "trigger": "[mock trigger]",
+        "goal": "[mock goal]",
+        "unknowns_targeted": [
+          "Metrics",
+          "Metrics"
+        ],
+        "finding_ids": [
+          "[mock finding_ids]",
+          "[mock finding_ids]"
+        ],
+        "materials": [
+          "[mock materials]",
+          "[mock materials]"
+        ],
+        "subject": "[mock subject]",
+        "body": "[mock body]",
+        "why_this_step": "[mock why_this_step]"
+      },
+      {
+        "step": 3,
+        "send_timing": "[mock send_timing]",
+        "trigger": "[mock trigger]",
+        "goal": "[mock goal]",
+        "unknowns_targeted": [
+          "Metrics",
+          "Metrics"
+        ],
+        "finding_ids": [
+          "[mock finding_ids]",
+          "[mock finding_ids]"
+        ],
+        "materials": [
+          "[mock materials]",
+          "[mock materials]"
+        ],
+        "subject": "[mock subject]",
+        "body": "[mock body]",
+        "why_this_step": "[mock why_this_step]"
+      }
+    ],
+    "reply_branches": [
+      {
+        "if_reply": "[mock if_reply]",
+        "next_move": "[mock next_move]"
+      },
+      {
+        "if_reply": "[mock if_reply]",
+        "next_move": "[mock next_move]"
+      }
+    ]
+  },
+  "valid": true
+}
